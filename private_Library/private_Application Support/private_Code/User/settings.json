@@ -5,7 +5,7 @@
   "symbols.hidesExplorerArrows": true,
   "material-icon-theme.hidesExplorerArrows": true,
   "editor.fontFamily": "'Monaspace Neon', monospace",
-  "editor.inlineSuggest.fontFamily": "'Monaspace Xenon', monospace",
+  "editor.inlineSuggest.fontFamily": "'Monaspace Radon', monospace",
   "editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss07', 'ss09', 'liga', 'cv01' 2",
   "editor.fontSize": 14,
   "editor.tabSize": 4,
@@ -68,6 +68,7 @@
   },
   "python.analysis.autoImportCompletions": true,
   "python.terminal.activateEnvironment": true,
+  "python.analysis.typeCheckingMode": "standard",
 
   // Files
   "files.associations": {

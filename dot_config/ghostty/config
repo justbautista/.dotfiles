@@ -19,7 +19,6 @@ macos-titlebar-style = tabs
 confirm-close-surface = false
 macos-option-as-alt = true
 
-
 # -- Keybinds --
 
 ## Global Keybinds
