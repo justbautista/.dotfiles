@@ -30,6 +30,9 @@ return {
           terminal = true,
           sidebars = true,
         },
+        high_visibility = {
+          darker = true,
+        },
       })
     end,
   },
