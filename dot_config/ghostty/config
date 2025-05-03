@@ -3,7 +3,7 @@
 theme = GitHub-Dark-Default
 font-family = Monaspace Neon
 font-size = 16
-font-feature = -liga, -calt, -dlig
+font-feature = 'calt', 'ss01', 'ss03', 'ss07', 'ss09', 'liga', 'cv01' 2
 cursor-style = block
 cursor-style-blink = true
 shell-integration-features = no-cursor

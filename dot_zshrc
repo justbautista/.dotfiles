@@ -205,18 +205,18 @@ alias dot_vscode='cd ~/.dotfiles/vscode/Library/Application\ Support/Code/User'
 # chezmoi edit
 chezit() {
   case "$1" in
-    zshrc) chezmoi edit ~/.zshrc ;;
-    ghostty) chezmoi edit ~/.config/ghostty/config ;;
-    ruff) chezmoi edit ~/.config/ruff/ruff.toml ;;
-    prettier) chezmoi edit ~/.config/prettier/.prettierrc ;;
-    vscs) chezmoi edit ~/Library/Application\ Support/Code/User/settings.json ;;
-    vsck) chezmoi edit ~/Library/Application\ Support/Code/User/keybindings.json ;;
-    nvim) nvim ~/.local/share/chezmoi/dot_config/nvim ;;
-    bashrc) chezmoi edit ~/.bashrc ;;
-    config) nvim ~/.local/share/chezmoi/.chezmoi.toml.tmpl ;;
-    ignore) nvim ~/.local/share/chezmoi/.chezmoiignore.tmpl ;;
+    zshrc) chezmoi edit --apply ~/.zshrc && source ~/.zshrc ;;
+    ghostty) chezmoi edit --apply ~/.config/ghostty/config ;;
+    ruff) chezmoi edit --apply ~/.config/ruff/ruff.toml ;;
+    prettier) chezmoi edit --apply ~/.config/prettier/.prettierrc ;;
+    vscs) chezmoi edit --apply ~/Library/Application\ Support/Code/User/settings.json ;;
+    vsck) chezmoi edit --apply ~/Library/Application\ Support/Code/User/keybindings.json ;;
+    nvim) nvim ~/.local/share/chezmoi/dot_config/nvim && chezmoi apply ;;
+    config) nvim ~/.local/share/chezmoi/.chezmoi.toml.tmpl && chezmoi init ;;
+    ignore) nvim ~/.local/share/chezmoi/.chezmoiignore.tmpl && chezmoi apply ;;
+    gitignore) nvim ~/.local/share/chezmoi/.gitignore ;;
     *) 
-      echo "Huh? What is $1?"
+      echo "Huh? What is '$1'?"
       echo ""
       echo "Existing chezitz:"
       echo "zshrc"
