@@ -1,4 +1,12 @@
 return {
+  -- set colorscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "material", -- Replace with your colorscheme
+    },
+  },
+
   -- colorschemes
   {
     "marko-cerovac/material.nvim",
@@ -47,13 +55,5 @@ return {
         transparent = true,
       })
     end,
-  },
-
-  -- set colorscheme
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "material", -- Replace with your colorscheme
-    },
   },
 }
