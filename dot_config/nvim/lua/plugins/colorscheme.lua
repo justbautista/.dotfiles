@@ -35,9 +35,23 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
+      vim.g.material_style = "deep ocean"
       require("material").setup({
-        style = "deep ocean",
-        transparent = true,
+        plugins = {
+          "gitsigns",
+          "nvim-cmp",
+          "nvim-tree",
+          "telescope",
+          "trouble",
+          "which-key",
+        },
+        disable = {
+          background = true, -- Enable transparency
+        },
+        contrast = {
+          terminal = true,
+          sidebars = true,
+        },
       })
     end,
   },
