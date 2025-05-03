@@ -217,7 +217,7 @@ chezit() {
     gitignore) nvim ~/.local/share/chezmoi/.gitignore ;;
     *) 
       echo "Huh? What is '$1'?"
-      echo ""
+      echo "-------------------------"
       echo "Existing chezitz:"
       echo "zshrc"
       echo "ghostty"
