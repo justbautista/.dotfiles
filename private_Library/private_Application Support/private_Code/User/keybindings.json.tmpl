@@ -3,7 +3,7 @@
 	// Wipe (close) from non-editor
 	{
 		// Close sidebar and focus editor when explorer is focused
-		"key": "shift-escape",
+		"key": "space e",
 		"command": "runCommands",
 		"args": {
 			"commands": [
@@ -11,7 +11,7 @@
 				"workbench.action.focusActiveEditorGroup"
 			]
 		},
-		"when": "explorerViewletVisible"
+		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{
 		// Close sidebar and focus editor when sidebar is focused
