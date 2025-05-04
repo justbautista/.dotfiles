@@ -3,7 +3,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "material", -- Replace with your colorscheme
+      colorscheme = "github-theme", -- Replace with your colorscheme
     },
   },
 
