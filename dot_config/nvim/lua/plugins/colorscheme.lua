@@ -13,7 +13,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.material_style = "darker"
+      vim.g.material_style = "deep ocean"
       require("material").setup({
         plugins = {
           "coc",
@@ -47,7 +47,7 @@ return {
           "nvim-notify",
         },
         disable = {
-          background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
+          background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
         },
         contrast = {
           terminal = true,
