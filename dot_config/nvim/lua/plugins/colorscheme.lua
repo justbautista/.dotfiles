@@ -3,7 +3,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "material", -- Replace with your colorscheme
+      colorscheme = "tokyonight", -- Replace with your colorscheme
     },
   },
 
@@ -73,5 +73,10 @@ return {
         },
       })
     end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = { style = "night" },
   },
 }
