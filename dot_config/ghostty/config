@@ -1,14 +1,14 @@
 # -- UI --
 
-theme = GitHub-Dark-Default
+theme = MaterialOcean
 font-family = Monaspace Neon
 font-size = 16
 font-feature = 'calt', 'ss01', 'ss03', 'ss07', 'ss09', 'liga', 'cv01' 2
 cursor-style = block
 cursor-style-blink = true
 shell-integration-features = no-cursor
-background-opacity = 0.9
-background-blur = 10
+# background-opacity = 0.9
+# background-blur = 10
 window-position-x = 0
 window-position-y = 0
 window-padding-x = 10
