@@ -15,7 +15,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.material_style = "deep ocean"
+      vim.g.material_style = "darker"
       require("material").setup({
         plugins = {
           "coc",
@@ -47,9 +47,6 @@ return {
           "trouble",
           "which-key",
           "nvim-notify",
-        },
-        custom_highlights = {
-          CursorLine = { fg = colors.editor.constrast, underline = true },
         },
         disable = {
           background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
