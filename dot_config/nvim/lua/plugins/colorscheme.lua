@@ -52,8 +52,8 @@ return {
         contrast = {
           terminal = true,
           sidebars = true,
-          floating_windows = false,
-          cursor_line = false,
+          floating_windows = true,
+          cursor_line = true,
         },
         high_visibility = {
           darker = true,
