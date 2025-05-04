@@ -16,23 +16,63 @@ return {
       vim.g.material_style = "deep ocean"
       require("material").setup({
         plugins = {
+          "coc",
+          "colorful-winsep",
+          "dap",
+          "dashboard",
+          "eyeliner",
+          "fidget",
+          "flash",
           "gitsigns",
+          "harpoon",
+          "hop",
+          "illuminate",
+          "indent-blankline",
+          "lspsaga",
+          "mini",
+          "neogit",
+          "neotest",
+          "neo-tree",
+          "neorg",
+          "noice",
           "nvim-cmp",
+          "nvim-navic",
           "nvim-tree",
+          "nvim-web-devicons",
+          "rainbow-delimiters",
+          "sneak",
           "telescope",
           "trouble",
           "which-key",
+          "nvim-notify",
+        },
+        styles = { -- Give comments style such as bold, italic, underline etc.
+          comments = { --[[ italic = true ]]
+          },
+          strings = { --[[ bold = true ]]
+          },
+          keywords = { --[[ underline = true ]]
+          },
+          functions = { --[[ bold = true, undercurl = true ]]
+          },
         },
         disable = {
-          background = true, -- Enable transparency
+          colored_cursor = false, -- Disable the colored cursor
+          borders = false, -- Disable borders between vertically split windows
+          background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
+          term_colors = false, -- Prevent the theme from setting terminal colors
+          eob_lines = false, -- Hide the end-of-buffer lines
         },
         contrast = {
           terminal = true,
           sidebars = true,
+          floating_windows = true,
+          cursor_line = true,
         },
         high_visibility = {
           darker = true,
         },
+        lualine_style = "stealth",
       })
     end,
   },
@@ -45,17 +85,6 @@ return {
         options = {
           transparent = true,
         },
-      })
-    end,
-  },
-  {
-    "folke/tokyonight.nvim", -- Replace with your theme plugin
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("tokyonight").setup({
-        style = "storm", -- Options: "storm", "moon", "night", "day"
-        transparent = true,
       })
     end,
   },
