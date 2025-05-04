@@ -52,7 +52,7 @@ return {
         contrast = {
           terminal = true,
           sidebars = true,
-          floating_windows = true,
+          floating_windows = false,
           cursor_line = true,
         },
         high_visibility = {
