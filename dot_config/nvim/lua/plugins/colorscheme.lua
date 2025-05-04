@@ -48,8 +48,8 @@ return {
         },
         styles = {
           comments = { italic = true },
-          keywords = { underline = true },
-          functions = { bold = true, undercurl = true },
+          keywords = { italic = true },
+          functions = {},
           variables = {},
           operators = {},
           types = {},
