@@ -79,7 +79,7 @@ disabled = false
 disabled = false
 time_format = "%R"
 style = "bold white"
-format = '[  $time ]($style)'
+format = '[ $time ]($style)'
 
 [directory]
 read_only = " 󰌾"
