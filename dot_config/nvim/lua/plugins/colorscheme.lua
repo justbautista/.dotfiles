@@ -46,6 +46,14 @@ return {
           "which-key",
           "nvim-notify",
         },
+        styles = {
+          comments = { italic = true },
+          keywords = { underline = true },
+          functions = { bold = true, undercurl = true },
+          variables = {},
+          operators = {},
+          types = {},
+        },
         disable = {
           background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
         },
@@ -56,9 +64,9 @@ return {
           cursor_line = false,
         },
         high_visibility = {
-          darker = false,
+          darker = true,
         },
-        lualine_style = "default",
+        lualine_style = "stealth",
       })
     end,
   },
