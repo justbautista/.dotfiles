@@ -261,7 +261,7 @@ symbol = "󰏗 "
 
 [python]
 symbol = " "
-format = "[$symbol($version(-$name) )]($style)"
+format = "via [${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
 
 [rlang]
 symbol = "󰟔 "
