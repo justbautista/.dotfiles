@@ -186,6 +186,9 @@ alias lsa="eza --color=always --long --git --changed --icons=always --no-user --
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# starship
+eval "$(starship init zsh)"
+
 # shorthand commands
 alias cl="clear"
 alias hm="cd ~"
