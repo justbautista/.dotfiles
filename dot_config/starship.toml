@@ -65,7 +65,7 @@ $time\
 """
 
 [fill]
-disabled = true
+disabled = false
 symbol = " "
 
 [username]
