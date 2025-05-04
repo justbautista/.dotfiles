@@ -50,8 +50,8 @@ return {
           background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
         },
         contrast = {
-          terminal = false,
-          sidebars = false,
+          terminal = true,
+          sidebars = true,
           floating_windows = false,
           cursor_line = false,
         },
