@@ -47,7 +47,7 @@ return {
           "nvim-notify",
         },
         disable = {
-          background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
+          background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
         },
         contrast = {
           terminal = true,
