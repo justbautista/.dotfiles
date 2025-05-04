@@ -1,3 +1,5 @@
+local colors = require("material.colors")
+
 return {
   -- set colorscheme
   {
@@ -45,6 +47,9 @@ return {
           "trouble",
           "which-key",
           "nvim-notify",
+        },
+        custom_highlights = {
+          CursorLine = { fg = colors.editor.constrast, underline = true },
         },
         disable = {
           background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
