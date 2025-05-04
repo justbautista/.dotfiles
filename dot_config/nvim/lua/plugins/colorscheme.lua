@@ -47,26 +47,22 @@ return {
           "nvim-notify",
         },
         styles = { -- Give comments style such as bold, italic, underline etc.
-          comments = { --[[ italic = true ]]
-          },
-          strings = { --[[ bold = true ]]
-          },
-          keywords = { --[[ underline = true ]]
-          },
-          functions = { --[[ bold = true, undercurl = true ]]
-          },
+          comments = { [[ italic = true ]] },
+          strings = { [[ bold = true ]] },
+          keywords = { [[ underline = true ]] },
+          functions = { [[ bold = true, undercurl = true ]] },
         },
         disable = {
           colored_cursor = false, -- Disable the colored cursor
           borders = false, -- Disable borders between vertically split windows
-          background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
+          background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
           term_colors = false, -- Prevent the theme from setting terminal colors
           eob_lines = false, -- Hide the end-of-buffer lines
         },
         contrast = {
           terminal = true,
           sidebars = true,
-          floating_windows = true,
+          floating_windows = false,
           cursor_line = true,
         },
         high_visibility = {
