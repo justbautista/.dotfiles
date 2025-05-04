@@ -1,5 +1,3 @@
-local colors = require("material.colors")
-
 return {
   -- set colorscheme
   {
