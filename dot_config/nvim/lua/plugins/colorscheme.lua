@@ -56,7 +56,7 @@ return {
           cursor_line = false,
         },
         high_visibility = {
-          darker = true,
+          darker = false,
         },
         lualine_style = "default",
       })
