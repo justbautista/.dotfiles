@@ -215,6 +215,7 @@ chezit() {
     vscs) chezmoi edit --apply ~/Library/Application\ Support/Code/User/settings.json ;;
     vsck) chezmoi edit --apply ~/Library/Application\ Support/Code/User/keybindings.json ;;
     nvim) nvim ~/.local/share/chezmoi/dot_config/nvim && chezmoi re-add ~/.config/nvim/lazyvim.json && chezmoi re-add ~/.config/nvim/lazy-lock.json && chezmoi apply ;;
+    starship) chezmoi edit --apply ~/.config/starship.toml ;;
     config) nvim ~/.local/share/chezmoi/.chezmoi.toml.tmpl && chezmoi init ;;
     ignore) nvim ~/.local/share/chezmoi/.chezmoiignore.tmpl && chezmoi apply ;;
     gitignore) nvim ~/.local/share/chezmoi/.gitignore ;;
@@ -229,6 +230,7 @@ chezit() {
       echo "vscs"
       echo "vsck"
       echo "nvim"
+      echo "starship"
       echo "bashrc"
       echo "config"
       echo "ignore"
