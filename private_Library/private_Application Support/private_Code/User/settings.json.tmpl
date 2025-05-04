@@ -126,33 +126,45 @@
 	// 	 "*": false
 	// },
 
-	// Vim
-	"vim.useSystemClipboard": true,
-	"vim.smartRelativeLine": true,
+  // Vim
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
   "vim.surround": true,
-	"vim.highlightedyank.enable": true,
-	"vim.highlightedyank.duration": 250,
-	"vim.timeout": 100000,
-	"vim.leader": "<space>",
-	"vim.handleKeys": {
-		"<C-h>": false,
-		"<C-j>": false,
-		"<C-k>": false,
-		"<C-l>": false,
-		"<C-w>": false,
-		"<space>": true
-	},
-	"vim.normalModeKeyBindingsNonRecursive": [
-		// Vim bindings
-		{
-			// Switch between recent tabs (like alt-tab)
-			"before": ["<tab>"],
-			"after": ["<C-6>"]
-		},
-		{
-			"before": ["<leader>", "a"],
-			"after": ["g", "g", "<S-v>", "<S-g>"]
-		},
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 250,
+  "vim.timeout": 100000,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-h>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-l>": false,
+    "<C-w>": false,
+    "<space>": true
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Vim bindings
+  {
+    // Switch between recent tabs (like alt-tab)
+    "before": ["<tab>"],
+    "after": ["<C-6>"]
+  },
+  {
+    "before": ["<leader>", "a"],
+    "after": ["g", "g", "<S-v>", "<S-g>"]
+  },
 
 		// Vscode bingings
 		// Layout & buffer management
