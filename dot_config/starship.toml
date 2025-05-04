@@ -7,7 +7,6 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$git_metrics\
 $hg_branch\
 $fill\
 $pijul_channel\
@@ -66,6 +65,7 @@ $time\
 """
 
 [fill]
+disabled = true
 symbol = " "
 
 [username]
