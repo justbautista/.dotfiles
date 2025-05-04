@@ -53,12 +53,12 @@ return {
           terminal = true,
           sidebars = true,
           floating_windows = true,
-          cursor_line = true,
+          cursor_line = false,
         },
         high_visibility = {
           darker = true,
         },
-        lualine_style = "stealth",
+        lualine_style = "default",
       })
     end,
   },
