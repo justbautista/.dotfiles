@@ -68,8 +68,8 @@ $time\
 
 [custom.uv]
 detect_files = ['uv.lock']
-style = "purple"
-symbol = "uv"
+style = "bold purple"
+symbol = "uv "
 format = "[$symbol]($style)"
 
 [git_metrics]
