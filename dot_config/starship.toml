@@ -10,6 +10,7 @@ $git_status\
 $git_metrics\
 $hg_branch\
 $fill\
+$cmd_duration\
 ${custom.uv}\
 $pijul_channel\
 $docker_context\
