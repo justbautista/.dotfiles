@@ -88,7 +88,8 @@ format = '[ $time ]($style)'
 
 [directory]
 read_only = " 󰌾"
-truncation_length = 3
+truncation_length = 5
+truncate_to_repo = false
 truncation_symbol = "…/"
 format = "[$path]($style)[$read_only]($read_only_style) "
 
