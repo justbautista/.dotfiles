@@ -108,16 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # zsh-autosuggestions config
-# (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
-# ZSH_HIGHLIGHT_STYLES[path]='none'
-# ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
-
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[path]=none
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=none
-ZSH_HIGHLIGHT_STYLES[precommand]=none
+ZSH_HIGHLIGHT_STYLES[path]='none'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
+
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -201,6 +195,7 @@ alias cl="clear"
 alias hm="cd ~"
 alias hc="cd ~ && clear"
 alias nv="nvim"
+alias ..="cd .."
 
 # brew aliases
 alias refill="brew update && brew upgrade && brew cleanup"
