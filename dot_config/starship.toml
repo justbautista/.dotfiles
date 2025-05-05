@@ -10,6 +10,7 @@ $git_status\
 $git_metrics\
 $hg_branch\
 $fill\
+${custom.uv}\
 $pijul_channel\
 $docker_context\
 $package\
@@ -64,6 +65,12 @@ $shell\
 $time\
 \n$character\
 """
+
+[custom.uv]
+detect_files = ['uv.lock']
+style = "purple"
+symbol = "uv"
+format = "[$symbol]($style)"
 
 [git_metrics]
 disabled = false
