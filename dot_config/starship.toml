@@ -70,7 +70,7 @@ $time\
 [cmd_duration]
 disabled = false
 style = "bold blue"
-format = "[$duration]($style) "
+format = "[ $duration]($style) "
 
 [custom.uv]
 detect_files = ['uv.lock']
