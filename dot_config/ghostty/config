@@ -1,7 +1,7 @@
 # -- UI --
 
 theme = MaterialOcean
-# font-family = Monaspace Neon
+font-family = Monaspace Neon
 font-size = 16
 font-feature = 'calt', 'ss01', 'ss03', 'ss07', 'ss09', 'liga', 'cv01' 2
 cursor-style = block
