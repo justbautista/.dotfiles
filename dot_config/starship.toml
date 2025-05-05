@@ -7,6 +7,7 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
+$git_metrics\
 $hg_branch\
 $fill\
 $pijul_channel\
@@ -63,6 +64,10 @@ $shell\
 $time\
 \n$character\
 """
+
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [fill]
 disabled = false
