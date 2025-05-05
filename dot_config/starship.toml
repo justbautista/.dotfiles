@@ -95,7 +95,7 @@ disabled = false
 
 [time]
 disabled = false
-time_format = "%R"
+use_12hr = true
 style = "bold white"
 format = '[ $time ]($style)'
 
