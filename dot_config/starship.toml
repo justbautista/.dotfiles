@@ -96,7 +96,7 @@ disabled = false
 [time]
 disabled = false
 time_format = "%I:%M %p"
-style = "bold white"
+style = "bold #ffffff"
 format = '[ $time ]($style)'
 
 [directory]
