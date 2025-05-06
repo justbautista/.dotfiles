@@ -92,6 +92,7 @@ format = '[$user ]($style)'
 
 [os]
 disabled = false
+style = "#ffffff"
 
 [time]
 disabled = false
