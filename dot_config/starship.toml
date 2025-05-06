@@ -98,7 +98,7 @@ style = "#ffffff"
 disabled = false
 time_format = "%I:%M %p"
 style = "bold #ffffff"
-format = '[ $time ]($style)'
+format = '[ $time]($style)'
 
 [directory]
 read_only = " 󰌾"
