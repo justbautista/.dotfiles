@@ -1,5 +1,10 @@
 .DS_Store
 
 {{- if ne .chezmoi.os "darwin" -}}
+Library/
 Library/**
+.config/brew/
+.config/brew/**
+.config/ghostty/
+.config/ghostty/**
 {{- end -}}
