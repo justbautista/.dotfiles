@@ -80,6 +80,8 @@ format = "[$symbol]($style)"
 
 [git_metrics]
 disabled = false
+added_style = "bold #42be65"
+deleted_style = "bold #ee5396"
 format = "[+$added]($added_style)/[-$deleted]($deleted_style) "
 
 [fill]
@@ -102,7 +104,7 @@ format = '[ $time]($style)'
 
 [directory]
 read_only = " 󰌾"
-style = "bold #41D9CA"
+style = "bold #3ddbd9"
 truncation_length = 5
 truncate_to_repo = true
 truncation_symbol = "…/"
@@ -167,6 +169,7 @@ tag_symbol = '  '
 
 [golang]
 symbol = " "
+style = "bold #82cfff"
 format = "[$symbol($version(-$name) )]($style)"
 
 [guix_shell]
@@ -211,6 +214,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+style = "bold #42be65"
 format = "[$symbol($version(-$name) )]($style)"
 
 [ocaml]
