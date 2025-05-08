@@ -198,6 +198,7 @@ symbol = " "
 
 [lua]
 symbol = " "
+style = "bold #33b1ff"
 format = "[$symbol($version(-$name) )]($style)"
 
 [memory_usage]
