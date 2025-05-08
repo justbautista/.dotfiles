@@ -80,8 +80,8 @@ format = "[$symbol]($style)"
 
 [git_metrics]
 disabled = false
-added_style = "bold #42be65"
-deleted_style = "bold #ee5396"
+# added_style = "bold #42be65"
+# deleted_style = "bold #ee5396"
 format = "[+$added]($added_style)/[-$deleted]($deleted_style) "
 
 [fill]
@@ -104,7 +104,7 @@ format = '[ $time]($style)'
 
 [directory]
 read_only = " 󰌾"
-style = "bold #3ddbd9"
+# style = "bold #3ddbd9"
 truncation_length = 5
 truncate_to_repo = true
 truncation_symbol = "…/"
