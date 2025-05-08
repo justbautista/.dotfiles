@@ -112,7 +112,9 @@ source $ZSH/oh-my-zsh.sh
 ZSH_HIGHLIGHT_STYLES[path]='none'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=#ee5396,bold
-
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=#33b1ff,bold
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=#33b1ff,bold
+ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=#33b1ff,bold
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
