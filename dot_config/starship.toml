@@ -169,7 +169,7 @@ tag_symbol = '  '
 
 [golang]
 symbol = " "
-style = "bold #82cfff"
+# style = "bold #82cfff"
 format = "[$symbol($version(-$name) )]($style)"
 
 [guix_shell]
@@ -198,7 +198,7 @@ symbol = " "
 
 [lua]
 symbol = " "
-style = "bold #33b1ff"
+# style = "bold #33b1ff"
 format = "[$symbol($version(-$name) )]($style)"
 
 [memory_usage]
@@ -215,7 +215,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
-style = "bold #42be65"
+# style = "bold #42be65"
 format = "[$symbol($version(-$name) )]($style)"
 
 [ocaml]
