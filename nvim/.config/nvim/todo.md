@@ -1,0 +1,4 @@
+- configure lsp keymappings
+- configure which key
+- add markdown renderer
+- configure all keymaps

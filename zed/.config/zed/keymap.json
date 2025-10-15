@@ -1,0 +1,128 @@
+[
+    {
+        "bindings": {
+            "ctrl-j": "menu::SelectNext",
+            "ctrl-k": "menu::SelectPrevious",
+            "ctrl-w z": "workspace::ToggleZoom",
+            "cmd-shift-k cmd-shift-s": "zed::OpenKeymap",
+            "shift-j": null,
+            "shift-k": null,
+            "cmd-g": null,
+            "g i": null
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-shift-g": "git_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            "cmd-s": "editor::Format"
+        }
+    },
+    {
+        "context": "Editor && (showing_code_actions || showing_completions)",
+        "bindings": {
+            "ctrl-j": "editor::ContextMenuNext",
+            "ctrl-k": "editor::ContextMenuPrevious"
+        }
+    },
+    {
+        "context": "GitPanel",
+        "bindings": {
+            "cmd-shift-g": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "cmd-shift-e": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "a": "project_panel::NewFile",
+            "shift-a": "project_panel::NewDirectory",
+            "d": "project_panel::Delete",
+            "x": "project_panel::Cut",
+            "y": "project_panel::Copy",
+            "p": "project_panel::Paste",
+            "r": "project_panel::Rename",
+            "l": "project_panel::OpenPermanent",
+            "shift-h": "project_panel::SelectParent"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-`": "workspace::ToggleBottomDock"
+        }
+    },
+    {
+        "context": "Dock",
+        "bindings": {
+            "ctrl-w q": "pane::CloseActiveItem",
+            "ctrl-w h": "workspace::ActivatePaneLeft",
+            "ctrl-w l": "workspace::ActivatePaneRight",
+            "ctrl-w k": "workspace::ActivatePaneUp",
+            "ctrl-w j": "workspace::ActivatePaneDown",
+            "ctrl-w v": "pane::SplitVertical",
+            "ctrl-w [": "pane::ActivatePreviousItem",
+            "ctrl-w ]": "pane::ActivateNextItem"
+        }
+    },
+    {
+        "context": "AgentPanel",
+        "bindings": {
+            "cmd-?": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "VimControl && !VimWaiting && !menu",
+        "bindings": {
+            "space space": "file_finder::Toggle",
+            "space ,": "tab_switcher::ToggleAll",
+            "shift-k": "editor::Hover",
+            "j": ["vim::Down", { "display_lines": true }],
+            "k": ["vim::Up", { "display_lines": true }],
+            "g i": "editor::GoToImplementation",
+            "g r": "editor::FindAllReferences"
+        }
+    },
+    {
+        "context": "vim_mode == visual",
+        "bindings": {
+            "shift-k": "editor::MoveLineUp",
+            "shift-j": "editor::MoveLineDown",
+            "s": "vim::PushAddSurrounds"
+        }
+    },
+    {
+        "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+        "bindings": {
+            "q": "vim::MiniQuotes",
+            "b": "vim::MiniBrackets"
+        }
+    },
+    {
+        "context": "VimControl && !menu && vim_mode != operator",
+        "bindings": {
+            "w": "vim::NextSubwordStart",
+            "b": "vim::PreviousSubwordStart",
+            "e": "vim::NextSubwordEnd",
+            "g e": "vim::PreviousSubwordEnd"
+        }
+    },
+    {
+        "context": "EmptyPane || SharedScreen",
+        "bindings": {
+            // Put key bindings here (in addition to the context above) if you want them to
+            // work when no editor exists.
+            "space space": "file_finder::Toggle"
+        }
+    }
+]

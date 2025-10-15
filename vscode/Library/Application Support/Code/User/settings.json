@@ -1,0 +1,274 @@
+{
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.iconTheme": "symbols",
+    "symbols.hidesExplorerArrows": true,
+    "material-icon-theme.hidesExplorerArrows": true,
+    "editor.fontFamily": "'Monaspace Neon NF', monospace",
+    "editor.inlineSuggest.fontFamily": "'Monaspace Radon', monospace",
+    "editor.fontLigatures": "'calt', 'ss01', 'ss03', 'ss07', 'ss09', 'liga', 'cv01' 2",
+    "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.lineNumbers": "relative",
+    "workbench.startupEditor": "none",
+    "window.newWindowProfile": "Default",
+    "workbench.editor.showTabs": "single",
+    "files.autoSave": "afterDelay",
+    "workbench.sideBar.location": "right",
+
+    // Sidebar & Layout
+    "explorer.compactFolders": false,
+    "workbench.tree.indent": 12,
+    "workbench.activityBar.location": "top",
+
+    // Editor Behavior
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 1000,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.lightbulb.enabled": "off",
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "on"
+    },
+
+    // Bracket & Guides
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+
+    // Minimap
+    "editor.minimap.enabled": false,
+    "editor.minimap.autohide": "mouseover",
+    "editor.minimap.renderCharacters": false,
+
+    // Terminal
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.inheritEnv": false,
+    "workbench.panel.showLabels": false,
+
+    // Language-Specific Settings
+    "[javascript][javascriptreact][typescript][typescriptreact][yaml][css][scss][html][json][jsonc][jsonl][markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit"
+        }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "explicit",
+            "source.fixAll.ruff": "explicit"
+        }
+    },
+    "python.analysis.autoImportCompletions": true,
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "autoDocstring.startOnNewLine": true,
+
+    // Files
+    "files.associations": {
+        "*.scss": "postcss",
+        "*.css": "tailwindcss"
+    },
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "explorer.confirmDragAndDrop": false,
+
+    // Breadcrumbs
+    "breadcrumbs.showArrays": false,
+    "breadcrumbs.showBooleans": false,
+    "breadcrumbs.showClasses": false,
+    "breadcrumbs.showConstants": false,
+    "breadcrumbs.showConstructors": false,
+    "breadcrumbs.showEnumMembers": false,
+    "breadcrumbs.showEnums": false,
+    "breadcrumbs.showEvents": false,
+    "breadcrumbs.showFields": false,
+    "breadcrumbs.showFunctions": false,
+    "breadcrumbs.showInterfaces": false,
+    "breadcrumbs.showKeys": false,
+    "breadcrumbs.showMethods": false,
+    "breadcrumbs.showModules": false,
+    "breadcrumbs.showNamespaces": false,
+    "breadcrumbs.showNull": false,
+    "breadcrumbs.showNumbers": false,
+    "breadcrumbs.showObjects": false,
+    "breadcrumbs.showOperators": false,
+    "breadcrumbs.showPackages": false,
+    "breadcrumbs.showProperties": false,
+    "breadcrumbs.showStrings": false,
+    "breadcrumbs.showStructs": false,
+    "breadcrumbs.showTypeParameters": false,
+    "breadcrumbs.showVariables": false,
+
+    // Git
+    "git.timeline.showAuthor": false,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+
+    // Jupyter & Notebook
+    "notebook.output.scrolling": true,
+    "notebook.output.wordWrap": true,
+    "notebook.breadcrumbs.showCodeCells": false,
+    "jupyter.askForKernelRestart": false,
+
+    // Chat
+    "chat.agent.enabled": true,
+    "github.copilot.enable": {
+        "go": false
+    },
+
+    // Vim
+    "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "vim.surround": true,
+    "vim.camelCaseMotion.enable": false,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 250,
+    "vim.timeout": 100000,
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-h>": false,
+        "<C-j>": false,
+        "<C-k>": false,
+        "<C-l>": false,
+        "<C-w>": false,
+        "<space>": true
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Vim bindings
+        {
+            // Select all
+            "before": ["<leader>", "a"],
+            "after": ["g", "g", "<S-v>", "<S-g>"]
+        },
+        {
+            // Alt-tab editors
+            "before": ["<leader>", "b", "b"],
+            "after": ["<C-6>"]
+        },
+        {
+            // Delete character
+            "before": ["<leader>", "x"],
+            "after": ["\"", "_", "x"]
+        },
+
+        // Vscode bingings
+        // Search and files
+        {
+            // Search open editors
+            "before": ["<leader>", ","],
+            "commands": ["workbench.action.showAllEditors"]
+        },
+        {
+            // Search files in workspace
+            "before": ["<leader>", "<leader>"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            // Search text in workspace files
+            "before": ["<leader>", "<S-f>"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        {
+            // Search text in current file
+            "before": ["<leader>", "f"],
+            "commands": ["actions.find"]
+        },
+        {
+            // Open explorer
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            // Go to references
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            // Close current buffer
+            "before": ["<leader>", "b", "d"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            // Close other buffers
+            "before": ["<leader>", "b", "o"],
+            "commands": ["workbench.action.closeOtherEditors"]
+        },
+        {
+            // Close all buffers in group
+            "before": ["<leader>", "b", "q"],
+            "commands": ["workbench.action.closeEditorsInGroup"]
+        },
+
+        // Git
+        {
+            // Open source control (git)
+            "before": ["<leader>", "g"],
+            "commands": ["workbench.view.scm"]
+        },
+
+        // AI assistance
+        {
+            // Open chat
+            "before": ["<leader>", "i", "a"],
+            "commands": ["workbench.action.chat.open"]
+        },
+        {
+            // Open inline chat
+            "before": ["<leader>", "i", "l"],
+            "commands": ["inlineChat.start"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Vim bindings
+        {
+            // Paste replace
+            "before": ["<leader>", "p"],
+            "after": ["\"", "_", "d", "P"]
+        },
+        {
+            // Delete
+            "before": ["<leader>", "d"],
+            "after": ["\"", "_", "d"]
+        },
+
+        // Vscode bindings
+        {
+            // Search text in workspace files
+            "before": ["<leader>", "<S-f>"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        {
+            // Search text in current file
+            "before": ["<leader>", "f"],
+            "commands": ["actions.find"]
+        }
+    ],
+
+    // Extensions & Plugins
+    "prettier.requireConfig": false,
+    "prettier.configPath": "~/.config/prettier/.prettierrc",
+    "evenBetterToml.formatter.allowedBlankLines": 1,
+    "postman.settings.dotenv-detection-notification-visibility": false,
+    "supermaven.otherWarning": false,
+    "go.toolsManagement.autoUpdate": true,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-collections-post-response.instructions.md": true,
+        "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-collections-pre-request.instructions.md": true,
+        "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-folder-post-response.instructions.md": true,
+        "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-folder-pre-request.instructions.md": true,
+        "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-http-request-post-response.instructions.md": true,
+        "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-http-request-pre-request.instructions.md": true
+    }
+}
