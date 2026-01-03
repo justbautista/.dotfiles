@@ -14,7 +14,7 @@
     "window.newWindowProfile": "Default",
     "workbench.editor.showTabs": "single",
     "files.autoSave": "afterDelay",
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
 
     // Sidebar & Layout
     "explorer.compactFolders": false,
@@ -270,5 +270,7 @@
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-folder-pre-request.instructions.md": true,
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-http-request-post-response.instructions.md": true,
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-http-request-pre-request.instructions.md": true
-    }
+    },
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "chat.viewSessions.orientation": "stacked"
 }
