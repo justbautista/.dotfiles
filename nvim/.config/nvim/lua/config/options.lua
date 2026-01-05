@@ -32,4 +32,5 @@ vim.o.inccommand = 'split' -- show live substitution in split window, (:%s/foo/b
 
 vim.o.updatetime = 250 -- update time for plugins and some other stuff (decreased to be faster)
 
+vim.opt.fillchars = { eob = " " } -- remove ~ from fill lines
 

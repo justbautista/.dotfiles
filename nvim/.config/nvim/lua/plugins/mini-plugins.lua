@@ -7,4 +7,5 @@ require('mini.icons').setup()
 require('mini.ai').setup()
 
 require('mini.animate').setup() -- animations like smooth scroll and smear 
-require('mini.notify').setup() -- notifications
+require('mini.notify').setup()
+
