@@ -33,4 +33,5 @@ vim.keymap.set('n', '<leader>a', 'ggVG', { desc = 'Select all' })
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete char without saving in register' })
 vim.keymap.set('v', '<leader>p', '"_dP', { desc = 'Paste over selected without saving in register' })
 
+vim.keymap.set('n', '<leader><tab>', '<cmd>e #<cr>', { desc = 'Alt-tab', silent = true })
 

@@ -34,3 +34,5 @@ vim.o.updatetime = 250 -- update time for plugins and some other stuff (decrease
 
 vim.opt.fillchars = { eob = " " } -- remove ~ from fill lines
 
+vim.o.showmode = false -- mode already shows in statusline
+
