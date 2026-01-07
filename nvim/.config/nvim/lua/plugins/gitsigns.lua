@@ -4,14 +4,14 @@ add({ source = 'lewis6991/gitsigns.nvim' })
 
 require('gitsigns').setup({
     signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        changedelete = { text = '*' },
+        add = { text = '▒' },
+        change = { text = '🮘' },
+        untracked = { text = '┇' },
     },
     signs_staged = {
-        add = { text = '+' },
-        change = { text = '~' },
-        changedelete = { text = '*' },
+        add = { text = '▒' },
+        change = { text = '🮘' },
+        untracked = { text = '┇' },
     },
     numhl = true,
     current_line_blame = true,

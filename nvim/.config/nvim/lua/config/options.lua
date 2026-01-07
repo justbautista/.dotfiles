@@ -36,3 +36,5 @@ vim.opt.fillchars = { eob = " " } -- remove ~ from fill lines
 
 vim.o.showmode = false -- mode already shows in statusline
 
+vim.o.winborder = 'single'
+

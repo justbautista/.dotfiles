@@ -23,5 +23,5 @@ require('mini.animate').setup({
     close = {
         enable = false,
     }
-}) 
+})
 

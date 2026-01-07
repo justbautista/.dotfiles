@@ -2,7 +2,6 @@
 require('plugins.theme')
 
 -- load icons
-require('mini.icons').setup()
 require('mini.deps').add({ source = 'nvim-tree/nvim-web-devicons' })
 require('nvim-web-devicons').setup()
 
