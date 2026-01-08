@@ -5,10 +5,10 @@ vim.o.tabstop = 4 -- how wide is a tab in spaces
 vim.o.shiftwidth = 4 -- how much to move selection in spaces when >/< or >>/<<
 vim.o.expandtab = true -- make tabs into spaces
 
-vim.o.mouse = 'a' -- enable mouse
-vim.o.mousescroll = 'ver:1,hor:1' -- smoother scroll
+vim.o.mouse = "a" -- enable mouse
+vim.o.mousescroll = "ver:1,hor:1" -- smoother scroll
 
-vim.o.clipboard = 'unnamedplus' -- sync os and nvim clipboard
+vim.o.clipboard = "unnamedplus" -- sync os and nvim clipboard
 
 vim.o.wrap = false -- disable softwrap by default
 vim.o.linebreak = true -- break on words when wrap is enabled
@@ -28,7 +28,7 @@ vim.o.undofile = false -- no persistent undos
 
 vim.o.confirm = true -- confirm to close buffer with unsaved changes
 
-vim.o.inccommand = 'split' -- show live substitution in split window, (:%s/foo/bar/g)
+vim.o.inccommand = "split" -- show live substitution in split window, (:%s/foo/bar/g)
 
 vim.o.updatetime = 250 -- update time for plugins and some other stuff (decreased to be faster)
 
@@ -36,5 +36,7 @@ vim.opt.fillchars = { eob = " " } -- remove ~ from fill lines
 
 vim.o.showmode = false -- mode already shows in statusline
 
-vim.o.winborder = 'single'
-
+vim.o.winborder = "single"
+-- vim.o.pumborder = "single"
+vim.opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
+vim.opt.completeopt:remove("preview")
