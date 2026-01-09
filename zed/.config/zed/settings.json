@@ -1,5 +1,9 @@
 {
     // === Agent & AI ===
+    "double_click_in_multibuffer": "open",
+    "cursor_shape": "bar",
+    "buffer_line_height": "comfortable",
+    "redact_private_values": false,
     "edit_predictions": {
         "mode": "subtle",
         "copilot": {
@@ -17,18 +21,10 @@
         },
     },
     "agent_ui_font_size": 17,
-    "context_servers": {
-        "mcp-server-context7": {
-            "enabled": true,
-            "settings": {
-                "default_minimum_tokens": "10000",
-            },
-        },
-    },
+    "context_servers": {},
     "features": {
         "edit_prediction_provider": "zed", // copilot, zed, supermaven
     },
-
     // === Appearance & Editor ===
     "theme": {
         "mode": "dark",
@@ -58,7 +54,6 @@
     "auto_signature_help": true,
     "inline_code_actions": false,
     "unnecessary_code_fade": 0.5,
-    "vertical_scroll_margin": 100,
     "colorize_brackets": true,
     "indent_guides": {
         "enabled": true,
@@ -77,7 +72,6 @@
             "milliseconds": 1000,
         },
     },
-
     // === UI ===
     "toolbar": {
         "breadcrumbs": true, // Whether to show breadcrumbs.
@@ -107,15 +101,19 @@
         "font_family": "Monaspace Neon NF",
         "font_size": 14,
         "blinking": "on",
-        "toolbar": { "breadcrumbs": false },
+        "toolbar": {
+            "breadcrumbs": false
+        },
         "detect_venv": {
             "on": {
-                "directories": [".venv", "venv"],
+                "directories": [
+                    ".venv",
+                    "venv"
+                ],
                 "activate_script": "default",
             },
         },
     },
-
     // === Diagnostics & Privacy ===
     "diagnostics": {
         "inline": {
@@ -126,16 +124,27 @@
         "metrics": false,
         "diagnostics": false,
     },
-
     // LSP
     "languages": {
         "Python": {
-            "language_servers": ["ruff", "!basedpyright", "ty"],
+            "language_servers": [
+                "ruff",
+                "!basedpyright",
+                "ty"
+            ],
             "format_on_save": "off",
             "formatter": [
-                { "code_action": "source.organizeImports.ruff" },
-                { "code_action": "source.fixAll.ruff" },
-                { "language_server": { "name": "ruff" } },
+                {
+                    "code_action": "source.organizeImports.ruff"
+                },
+                {
+                    "code_action": "source.fixAll.ruff"
+                },
+                {
+                    "language_server": {
+                        "name": "ruff"
+                    }
+                },
             ],
         },
     },
