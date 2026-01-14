@@ -1,128 +1,93 @@
+// See contexts: https://github.com/zed-industries/zed/issues/14718
+// Vim contexts: https://zed.dev/docs/vim#selecting-the-correct-context
+// Action sequence (run multiple commands) pr: https://github.com/zed-industries/zed/pull/39261
 [
+    // Global unbindings
     {
         "bindings": {
-            "ctrl-j": "menu::SelectNext",
-            "ctrl-k": "menu::SelectPrevious",
-            "ctrl-w z": "workspace::ToggleZoom",
-            "cmd-shift-k cmd-shift-s": "zed::OpenKeymap",
-            "shift-j": null,
-            "shift-k": null,
-            "cmd-g": null,
-            "g i": null
-        }
+            "J": null, // I don't use join lines in vim
+            "cmd-g": null, // I don't search next match with this map
+            "cmd-G": null, // Conflicts
+            "g i": null, // I don't use insert at previous in vim
+            "ctrl-h": null, // Conflicts with my keybinds
+            "ctrl-l": null, // Conflicts with my keybinds
+        },
     },
+    // Global bindings
     {
-        "context": "Workspace",
         "bindings": {
-            "cmd-shift-g": "git_panel::ToggleFocus"
-        }
+            "ctrl-j": "menu::SelectNext", // Move down on menus
+            "ctrl-k": "menu::SelectPrevious", // Move down on menus
+            "cmd-G": "git_panel::ToggleFocus", // Git panel
+            "cmd-?": "workspace::ToggleRightDock", // Open/close agent panel
+        },
     },
-    {
-        "context": "Editor",
-        "bindings": {
-            "cmd-s": "editor::Format"
-        }
-    },
+    // Move up/down through autocomplete with j/k
     {
         "context": "Editor && (showing_code_actions || showing_completions)",
         "bindings": {
             "ctrl-j": "editor::ContextMenuNext",
-            "ctrl-k": "editor::ContextMenuPrevious"
-        }
+            "ctrl-k": "editor::ContextMenuPrevious",
+        },
     },
+    // Window navigation
     {
-        "context": "GitPanel",
+        "context": "!Picker && !(showing_code_actions || showing_completions)",
         "bindings": {
-            "cmd-shift-g": "workspace::ToggleLeftDock"
-        }
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown",
+        },
     },
-    {
-        "context": "ProjectPanel",
-        "bindings": {
-            "cmd-shift-e": "workspace::ToggleLeftDock"
-        }
-    },
+    // Simulating oil.nvim for file exploration
     {
         "context": "ProjectPanel && not_editing",
         "bindings": {
-            "a": "project_panel::NewFile",
-            "shift-a": "project_panel::NewDirectory",
-            "d": "project_panel::Delete",
+            "o": "project_panel::NewFile",
+            "d d": "project_panel::Delete",
             "x": "project_panel::Cut",
-            "y": "project_panel::Copy",
+            "y y": "project_panel::Copy",
             "p": "project_panel::Paste",
-            "r": "project_panel::Rename",
-            "l": "project_panel::OpenPermanent",
-            "shift-h": "project_panel::SelectParent"
-        }
+            "c i w": "project_panel::Rename",
+            "-": "project_panel::CollapseSelectedEntry",
+            "q": "workspace::ToggleLeftDock",
+            "enter": ["action::Sequence", ["project_panel::OpenPermanent", "workspace::ToggleLeftDock"]],
+        },
     },
+    // Editor keybinds (vim and shortcuts)
     {
-        "context": "Terminal",
-        "bindings": {
-            "ctrl-`": "workspace::ToggleBottomDock"
-        }
-    },
-    {
-        "context": "Dock",
-        "bindings": {
-            "ctrl-w q": "pane::CloseActiveItem",
-            "ctrl-w h": "workspace::ActivatePaneLeft",
-            "ctrl-w l": "workspace::ActivatePaneRight",
-            "ctrl-w k": "workspace::ActivatePaneUp",
-            "ctrl-w j": "workspace::ActivatePaneDown",
-            "ctrl-w v": "pane::SplitVertical",
-            "ctrl-w [": "pane::ActivatePreviousItem",
-            "ctrl-w ]": "pane::ActivateNextItem"
-        }
-    },
-    {
-        "context": "AgentPanel",
-        "bindings": {
-            "cmd-?": "workspace::ToggleRightDock"
-        }
-    },
-    {
-        "context": "VimControl && !VimWaiting && !menu",
+        "context": "Editor && VimControl && !VimWaiting && !menu",
         "bindings": {
             "space space": "file_finder::Toggle",
-            "space ,": "tab_switcher::ToggleAll",
-            "shift-k": "editor::Hover",
-            "j": ["vim::Down", { "display_lines": true }],
-            "k": ["vim::Up", { "display_lines": true }],
-            "g i": "editor::GoToImplementation",
-            "g r": "editor::FindAllReferences"
-        }
+            "space tab": "tab_switcher::Toggle",
+            "g r": "editor::FindAllReferences",
+            "-": "vim::ToggleProjectPanelFocus",
+            "alt-z": "editor::ToggleSoftWrap",
+        },
     },
+    // Enable MiniQuotes and MiniBrackets
+    {
+        "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+        "bindings": {
+            "q": "vim::MiniQuotes",
+            "b": "vim::MiniBrackets",
+        },
+    },
+    // Move selected lines up/down
     {
         "context": "vim_mode == visual",
         "bindings": {
             "shift-k": "editor::MoveLineUp",
             "shift-j": "editor::MoveLineDown",
-            "s": "vim::PushAddSurrounds"
-        }
+        },
     },
-    {
-        "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
-        "bindings": {
-            "q": "vim::MiniQuotes",
-            "b": "vim::MiniBrackets"
-        }
-    },
-    {
-        "context": "VimControl && !menu && vim_mode != operator",
-        "bindings": {
-            "w": "vim::NextSubwordStart",
-            "b": "vim::PreviousSubwordStart",
-            "e": "vim::NextSubwordEnd",
-            "g e": "vim::PreviousSubwordEnd"
-        }
-    },
+    // No editor keybinds
     {
         "context": "EmptyPane || SharedScreen",
         "bindings": {
-            // Put key bindings here (in addition to the context above) if you want them to
-            // work when no editor exists.
-            "space space": "file_finder::Toggle"
-        }
-    }
+            "space space": "file_finder::Toggle",
+            "-": "vim::ToggleProjectPanelFocus",
+        },
+    },
 ]
