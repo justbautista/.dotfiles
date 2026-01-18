@@ -4,10 +4,10 @@
 [
     // Global unbindings
     {
+        "context": "Workspace",
         "bindings": {
             "J": null, // I don't use join lines in vim
             "cmd-g": null, // I don't search next match with this map
-            "cmd-G": null, // Conflicts
             "g i": null, // I don't use insert at previous in vim
             "ctrl-h": null, // Conflicts with my keybinds
             "ctrl-l": null, // Conflicts with my keybinds
@@ -15,11 +15,26 @@
     },
     // Global bindings
     {
+        "context": "Workspace",
         "bindings": {
             "ctrl-j": "menu::SelectNext", // Move down on menus
             "ctrl-k": "menu::SelectPrevious", // Move down on menus
             "cmd-G": "git_panel::ToggleFocus", // Git panel
-            "cmd-?": "workspace::ToggleRightDock", // Open/close agent panel
+            "cmd-?": "workspace::ToggleRightDock", // Close agent panel
+        },
+    },
+    // Close left dock when in ProjectPanel
+    {
+        "context": "Workspace && left_dock == ProjectPanel",
+        "bindings": {
+            "cmd-E": "workspace::ToggleLeftDock",
+        },
+    },
+    // Close left dock when in GitPanel
+    {
+        "context": "Workspace && left_dock == GitPanel",
+        "bindings": {
+            "cmd-G": "workspace::ToggleLeftDock",
         },
     },
     // Move up/down through autocomplete with j/k
@@ -40,7 +55,7 @@
             "ctrl-j": "workspace::ActivatePaneDown",
         },
     },
-    // Simulating oil.nvim for file exploration
+    // (Somewhat) Simulating oil.nvim for file exploration
     {
         "context": "ProjectPanel && not_editing",
         "bindings": {
@@ -64,6 +79,7 @@
             "g r": "editor::FindAllReferences",
             "-": "vim::ToggleProjectPanelFocus",
             "alt-z": "editor::ToggleSoftWrap",
+            "cmd-enter": "assistant::InlineAssist",
         },
     },
     // Enable MiniQuotes and MiniBrackets
