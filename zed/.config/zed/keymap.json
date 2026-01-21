@@ -4,7 +4,6 @@
 [
     // Global unbindings
     {
-        "context": "Workspace",
         "bindings": {
             "J": null, // I don't use join lines in vim
             "cmd-g": null, // I don't search next match with this map
@@ -15,10 +14,15 @@
     },
     // Global bindings
     {
-        "context": "Workspace",
         "bindings": {
             "ctrl-j": "menu::SelectNext", // Move down on menus
             "ctrl-k": "menu::SelectPrevious", // Move down on menus
+        },
+    },
+    // Workspace bindings
+    {
+        "context": "Workspace",
+        "bindings": {
             "cmd-G": "git_panel::ToggleFocus", // Git panel
             "cmd-?": "workspace::ToggleRightDock", // Close agent panel
         },
@@ -55,18 +59,19 @@
             "ctrl-j": "workspace::ActivatePaneDown",
         },
     },
-    // (Somewhat) Simulating oil.nvim for file exploration
+    // Project panel navigation and commands
     {
         "context": "ProjectPanel && not_editing",
         "bindings": {
-            "o": "project_panel::NewFile",
-            "d d": "project_panel::Delete",
+            "a": "project_panel::NewFile",
+            "d": "project_panel::Delete",
             "x": "project_panel::Cut",
-            "y y": "project_panel::Copy",
+            "y": "project_panel::Copy",
             "p": "project_panel::Paste",
-            "c i w": "project_panel::Rename",
+            "r": "project_panel::Rename",
             "-": "project_panel::CollapseSelectedEntry",
             "q": "workspace::ToggleLeftDock",
+            "o": "project_panel::Open",
             "enter": ["action::Sequence", ["project_panel::OpenPermanent", "workspace::ToggleLeftDock"]],
         },
     },
