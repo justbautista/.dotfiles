@@ -81,10 +81,10 @@
         "bindings": {
             "space space": "file_finder::Toggle",
             "space tab": "tab_switcher::Toggle",
-            "g r": "editor::FindAllReferences",
             "-": "vim::ToggleProjectPanelFocus",
             "alt-z": "editor::ToggleSoftWrap",
             "cmd-enter": "assistant::InlineAssist",
+            "space a": "editor::SelectAll",
         },
     },
     // Enable MiniQuotes and MiniBrackets
