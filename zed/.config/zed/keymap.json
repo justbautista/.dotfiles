@@ -19,9 +19,9 @@
             "ctrl-k": "menu::SelectPrevious", // Move down on menus
         },
     },
-    // Workspace bindings
+    // Shortcuts
     {
-        "context": "Workspace",
+        "context": "Workspace || Editor",
         "bindings": {
             "cmd-G": "git_panel::ToggleFocus", // Git panel
             "cmd-?": "workspace::ToggleRightDock", // Close agent panel

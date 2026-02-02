@@ -1,293 +1,308 @@
 // Place your key bindings in this file to override the defaults
 [
-	// Closing stuff
-	{
-		// Close sidebar and focus editor when explorer is focused
-		"key": "q",
-		"command": "runCommands",
-		"args": {
-			"commands": [
-				"workbench.action.closeSidebar",
-				"workbench.action.focusActiveEditorGroup"
-			]
-		},
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		// Close sidebar and focus editor when sidebar is focused
-		"key": "escape",
-		"command": "runCommands",
-		"args": {
-			"commands": [
-				"workbench.action.closeSidebar",
-				"workbench.action.focusActiveEditorGroup"
-			]
-		},
-		"when": "sideBarFocus && !explorerViewletVisible"
-	},
-	{
-		// Close auxiliary bar (secondary bar) and focus editor
-		"key": "escape",
-		"command": "runCommands",
-		"args": {
-			"commands": [
-				"workbench.action.closeAuxiliaryBar",
-				"workbench.action.focusActiveEditorGroup"
-			]
-		},
-		"when": "auxiliaryBarFocus"
-	},
-	{
-		// Close panel and focus editor
-		"key": "escape",
-		"command": "runCommands",
-		"args": {
-			"commands": [
-				"workbench.action.closePanel",
-				"workbench.action.focusActiveEditorGroup"
-			]
-		},
-		"when": "panelFocus"
-	},
+    // Closing stuff
+    {
+        // Close sidebar and focus editor when explorer is focused
+        "key": "q",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.focusActiveEditorGroup",
+            ],
+        },
+        "when": "filesExplorerFocus && !inputFocus",
+    },
+    {
+        // Close sidebar and focus editor when sidebar is focused
+        "key": "escape",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.focusActiveEditorGroup",
+            ],
+        },
+        "when": "sideBarFocus && !explorerViewletVisible",
+    },
+    {
+        // Close auxiliary bar (secondary bar) and focus editor
+        "key": "escape",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closeAuxiliaryBar",
+                "workbench.action.focusActiveEditorGroup",
+            ],
+        },
+        "when": "auxiliaryBarFocus",
+    },
+    {
+        // Close panel and focus editor
+        "key": "escape",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closePanel",
+                "workbench.action.focusActiveEditorGroup",
+            ],
+        },
+        "when": "panelFocus",
+    },
 
-	// Coding
-	{
-		// Move visual selection up
-		"key": "shift-k",
-		"command": "editor.action.moveLinesUpAction",
-		"when": "(vim.mode == 'Visual' || vim.mode == 'VisualLine' || vim.mode == 'VisualBlock') && editorTextFocus"
-	},
-	{
-		// Move visual selection down
-		"key": "shift-j",
-		"command": "editor.action.moveLinesDownAction",
-		"when": "(vim.mode == 'Visual' || vim.mode == 'VisualLine' || vim.mode == 'VisualBlock') && editorTextFocus"
-	},
-	{
-		// Hover action
-		"key": "shift-k",
-		"command": "editor.action.showHover",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
-	},
-	{
-		// Scroll up in quick open selection (picking tab/file)
-		"key": "ctrl-k",
-		"command": "workbench.action.quickOpenSelectPrevious",
-		"when": "inQuickOpen"
-	},
-	{
-		// Scroll down in quick open selection (picking tab/file)
-		"key": "ctrl-j",
-		"command": "workbench.action.quickOpenSelectNext",
-		"when": "inQuickOpen"
-	},
-	{
-		// Scroll up in code suggestions
-		"key": "ctrl-k",
-		"command": "selectPrevSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-	},
-	{
-		// Scroll down in code suggestions
-		"key": "ctrl-j",
-		"command": "selectNextSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-	},
-	{
-		// Selects word and goes to next match, multicursor
-		"key": "ctrl-n",
-		"command": "editor.action.addSelectionToNextFindMatch",
-		"when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-	},
+    // Coding
+    {
+        // Move visual selection up
+        "key": "shift-k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "(vim.mode == 'Visual' || vim.mode == 'VisualLine' || vim.mode == 'VisualBlock') && editorTextFocus",
+    },
+    {
+        // Move visual selection down
+        "key": "shift-j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "(vim.mode == 'Visual' || vim.mode == 'VisualLine' || vim.mode == 'VisualBlock') && editorTextFocus",
+    },
+    {
+        // Hover action
+        "key": "shift-k",
+        "command": "editor.action.showHover",
+        "when": "vim.mode == 'Normal' && editorTextFocus",
+    },
+    {
+        // Scroll up in quick open selection (picking tab/file)
+        "key": "ctrl-k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen",
+    },
+    {
+        // Scroll down in quick open selection (picking tab/file)
+        "key": "ctrl-j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen",
+    },
+    {
+        // Scroll up in code suggestions
+        "key": "ctrl-k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    },
+    {
+        // Scroll down in code suggestions
+        "key": "ctrl-j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    },
+    {
+        // Selects word and goes to next match, multicursor
+        "key": "ctrl-n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)",
+    },
 
-	// File explorer and menus
-	{
-		// Rename file in explorer
-		"key": "r",
-		"command": "renameFile",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Cut file in explorer
-		"key": "x",
-		"command": "filesExplorer.cut",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Delete file in explorer
-		"key": "d",
-		"command": "deleteFile",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Paste file in explorer
-		"key": "p",
-		"command": "filesExplorer.paste",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Copy file in explorer
-		"key": "y",
-		"command": "filesExplorer.copy",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Create new file in explorer
-		"key": "a",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Create new folder in explorer
-		"key": "shift-a",
-		"command": "explorer.newFolder",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		// Enter into file and focus editor
-		"key": "enter",
-		"command": "explorer.openAndPassFocus",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
-	},
-	{
-		// Open selection in peek view, might count for other stuff idk
-		"key": "o",
-		"command": "list.select",
-		"when": "listFocus && !inputFocus && !treestickyScrollFocused"
-	},
-	{
-		// In explorer, open file without passing focus
-		"key": "o",
-		"command": "filesExplorer.openFilePreserveFocus",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
-	},
+    // File explorer and menus
+    {
+        // Rename file in explorer
+        "key": "r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Cut file in explorer
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Delete file in explorer
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Paste file in explorer
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Copy file in explorer
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Create new file in explorer
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Create new folder in explorer
+        "key": "shift-a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    },
+    {
+        // Enter into file and focus editor
+        "key": "enter",
+        "command": "explorer.openAndPassFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus",
+    },
+    {
+        // Open selection in peek view, might count for other stuff idk
+        "key": "o",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused",
+    },
+    {
+        // In explorer, open file without passing focus
+        "key": "o",
+        "command": "filesExplorer.openFilePreserveFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus",
+    },
 
-	// Buffer (editor) management
-	{
-		"key": "ctrl-h",
-		"command": "workbench.action.navigateLeft",
-		"when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus"
-	},
-	{
-		"key": "ctrl-l",
-		"command": "workbench.action.navigateRight",
-		"when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus"
-	},
-	{
-		"key": "ctrl-k",
-		"command": "workbench.action.navigateUp",
-		"when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus"
-	},
-	{
-		"key": "ctrl-j",
-		"command": "workbench.action.navigateDown",
-		"when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus"
-	},
-	{
-		// Split right
-		"key": "ctrl-shift-l",
-		"command": "workbench.action.splitEditorRight",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
-	},
-	{
-		// Split down
-		"key": "ctrl-shift-j",
-		"command": "workbench.action.splitEditorDown",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
-	},
-	{
-		// Split right
-		"key": "ctrl-\\",
-		"command": "workbench.action.splitEditorRight",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
-	},
-	{
-		// Split down
-		"key": "ctrl--",
-		"command": "workbench.action.splitEditorDown",
-		"when": "vim.mode == 'Normal' && editorTextFocus"
-	},
-	{
-		// Close active editor
-		"key": "ctrl-w",
-		"command": "workbench.action.closeActiveEditor"
-	},
+    // Buffer (editor) management
+    {
+        "key": "ctrl-h",
+        "command": "workbench.action.navigateLeft",
+        "when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus",
+    },
+    {
+        "key": "ctrl-l",
+        "command": "workbench.action.navigateRight",
+        "when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus",
+    },
+    {
+        "key": "ctrl-k",
+        "command": "workbench.action.navigateUp",
+        "when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus",
+    },
+    {
+        "key": "ctrl-j",
+        "command": "workbench.action.navigateDown",
+        "when": "(vim.mode == 'Normal' && editorTextFocus) || sideBarFocus",
+    },
+    {
+        // Split right
+        "key": "ctrl-shift-l",
+        "command": "workbench.action.splitEditorRight",
+        "when": "vim.mode == 'Normal' && editorTextFocus",
+    },
+    {
+        // Split down
+        "key": "ctrl-shift-j",
+        "command": "workbench.action.splitEditorDown",
+        "when": "vim.mode == 'Normal' && editorTextFocus",
+    },
+    {
+        // Split right
+        "key": "ctrl-\\",
+        "command": "workbench.action.splitEditorRight",
+        "when": "vim.mode == 'Normal' && editorTextFocus",
+    },
+    {
+        // Split down
+        "key": "ctrl--",
+        "command": "workbench.action.splitEditorDown",
+        "when": "vim.mode == 'Normal' && editorTextFocus",
+    },
+    {
+        // Close active editor
+        "key": "ctrl-w",
+        "command": "workbench.action.closeActiveEditor",
+    },
 
-	// Settings
-	{
-		// Open settings json (macos)
-		"key": "shift-cmd-,",
-		"command": "workbench.action.openSettingsJson"
-	},
-	{
-		// Open keybindings json (macos)
-		"key": "shift-cmd-k shift-cmd-s",
-		"command": "workbench.action.openGlobalKeybindingsFile"
-	},
+    // Settings
+    {
+        // Open settings json (macos)
+        "key": "shift-cmd-,",
+        "command": "workbench.action.openSettingsJson",
+    },
+    {
+        // Open keybindings json (macos)
+        "key": "shift-cmd-k shift-cmd-s",
+        "command": "workbench.action.openGlobalKeybindingsFile",
+    },
 
-	// Unbindings
-	{
-		// Run python
-		"key": "shift+enter",
-		"command": "-python.execInREPL",
-		"when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
-	},
-	{
-		// Run python
-		"key": "shift+enter",
-		"command": "-python.execSelectionInTerminal",
-		"when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-	},
-	{
-		// Something I misclick and does nothing for me
-		"key": "cmd+e",
-		"command": "-actions.findWithSelection"
-	},
-	{
-		// Unbind for open settings json
-		"key": "shift+cmd+,",
-		"command": "-editor.action.inPlaceReplace.up",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		// Unbind for open settings json
-		"key": "shift+cmd+,",
-		"command": "-workbench.action.terminal.configureSuggestSettings",
-		"when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
-	},
-	{
-		// Unbind for closing editor
-		"key": "ctrl+w",
-		"command": "-workbench.action.switchWindow"
-	},
-	{
-		// Unbind for closing editor
-		"key": "ctrl+w",
-		"command": "-extension.vim_ctrl+w",
-		"when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-	},
-	{
-		// Unbind to force 'o' or 'enter' to open file
-		"key": "space",
-		"command": "-filesExplorer.openFilePreserveFocus",
-		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
-	},
-	{
-		// Unbind to force 'o' or 'enter' to open folder
-		"key": "space",
-		"command": "-list.toggleExpand",
-		"when": "listFocus && !inputFocus && !treestickyScrollFocused"
-	},
-	{
-		// Unbind for split right
-		"key": "ctrl+-",
-		"command": "-workbench.action.quickInputBack",
-		"when": "inQuickOpen"
-	},
-	{
-		// Unbind for split right
-		"key": "ctrl+-",
-		"command": "-workbench.action.navigateBack",
-		"when": "canNavigateBack"
-	}
+    // Unbindings
+    {
+        // Run python
+        "key": "shift+enter",
+        "command": "-python.execInREPL",
+        "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'",
+    },
+    {
+        // Run python
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'",
+    },
+    {
+        // Something I misclick and does nothing for me
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection",
+    },
+    {
+        // Unbind for open settings json
+        "key": "shift+cmd+,",
+        "command": "-editor.action.inPlaceReplace.up",
+        "when": "editorTextFocus && !editorReadonly",
+    },
+    {
+        // Unbind for open settings json
+        "key": "shift+cmd+,",
+        "command": "-workbench.action.terminal.configureSuggestSettings",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible",
+    },
+    {
+        // Unbind for closing editor
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow",
+    },
+    {
+        // Unbind for closing editor
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl",
+    },
+    {
+        // Unbind to force 'o' or 'enter' to open file
+        "key": "space",
+        "command": "-filesExplorer.openFilePreserveFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus",
+    },
+    {
+        // Unbind to force 'o' or 'enter' to open folder
+        "key": "space",
+        "command": "-list.toggleExpand",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused",
+    },
+    {
+        // Unbind for split right
+        "key": "ctrl+-",
+        "command": "-workbench.action.quickInputBack",
+        "when": "inQuickOpen",
+    },
+    {
+        // Unbind for split right
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack",
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "-editor.action.previousMatchFindAction",
+        "when": "editorFocus",
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active",
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active",
+    },
 ]

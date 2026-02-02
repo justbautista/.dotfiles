@@ -32,7 +32,7 @@
     "editor.quickSuggestions": {
         "other": "on",
         "comments": "off",
-        "strings": "on"
+        "strings": "on",
     },
 
     // Bracket & Guides
@@ -56,15 +56,15 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit",
-            "source.fixAll": "explicit"
-        }
+            "source.fixAll": "explicit",
+        },
     },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {
             "source.organizeImports.ruff": "explicit",
-            "source.fixAll.ruff": "explicit"
-        }
+            "source.fixAll.ruff": "explicit",
+        },
     },
     "python.analysis.autoImportCompletions": true,
     "python.terminal.activateEnvironment": true,
@@ -74,10 +74,10 @@
     // Files
     "files.associations": {
         "*.scss": "postcss",
-        "*.css": "tailwindcss"
+        "*.css": "tailwindcss",
     },
     "files.exclude": {
-        "**/__pycache__": true
+        "**/__pycache__": true,
     },
     "explorer.confirmDragAndDrop": false,
 
@@ -124,7 +124,11 @@
     // Chat
     "chat.agent.enabled": true,
     "github.copilot.enable": {
-        "go": false
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "go": true,
     },
 
     // Vim
@@ -142,24 +146,24 @@
         "<C-k>": false,
         "<C-l>": false,
         "<C-w>": false,
-        "<space>": true
+        "<space>": true,
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         // Vim bindings
         {
             // Select all
             "before": ["<leader>", "a"],
-            "after": ["g", "g", "<S-v>", "<S-g>"]
+            "after": ["g", "g", "<S-v>", "<S-g>"],
         },
         {
             // Alt-tab editors
             "before": ["<leader>", "b", "b"],
-            "after": ["<C-6>"]
+            "after": ["<C-6>"],
         },
         {
             // Delete character
             "before": ["<leader>", "x"],
-            "after": ["\"", "_", "x"]
+            "after": ["\"", "_", "x"],
         },
 
         // Vscode bingings
@@ -167,92 +171,92 @@
         {
             // Search open editors
             "before": ["<leader>", ","],
-            "commands": ["workbench.action.showAllEditors"]
+            "commands": ["workbench.action.showAllEditors"],
         },
         {
             // Search files in workspace
             "before": ["<leader>", "<leader>"],
-            "commands": ["workbench.action.quickOpen"]
+            "commands": ["workbench.action.quickOpen"],
         },
         {
             // Search text in workspace files
             "before": ["<leader>", "<S-f>"],
-            "commands": ["workbench.action.findInFiles"]
+            "commands": ["workbench.action.findInFiles"],
         },
         {
             // Search text in current file
             "before": ["<leader>", "f"],
-            "commands": ["actions.find"]
+            "commands": ["actions.find"],
         },
         {
             // Open explorer
             "before": ["<leader>", "e"],
-            "commands": ["workbench.view.explorer"]
+            "commands": ["workbench.view.explorer"],
         },
         {
             // Go to references
             "before": ["g", "r"],
-            "commands": ["editor.action.goToReferences"]
+            "commands": ["editor.action.goToReferences"],
         },
         {
             // Close current buffer
             "before": ["<leader>", "b", "d"],
-            "commands": ["workbench.action.closeActiveEditor"]
+            "commands": ["workbench.action.closeActiveEditor"],
         },
         {
             // Close other buffers
             "before": ["<leader>", "b", "o"],
-            "commands": ["workbench.action.closeOtherEditors"]
+            "commands": ["workbench.action.closeOtherEditors"],
         },
         {
             // Close all buffers in group
             "before": ["<leader>", "b", "q"],
-            "commands": ["workbench.action.closeEditorsInGroup"]
+            "commands": ["workbench.action.closeEditorsInGroup"],
         },
 
         // Git
         {
             // Open source control (git)
             "before": ["<leader>", "g"],
-            "commands": ["workbench.view.scm"]
+            "commands": ["workbench.view.scm"],
         },
 
         // AI assistance
         {
             // Open chat
             "before": ["<leader>", "i", "a"],
-            "commands": ["workbench.action.chat.open"]
+            "commands": ["workbench.action.chat.open"],
         },
         {
             // Open inline chat
             "before": ["<leader>", "i", "l"],
-            "commands": ["inlineChat.start"]
-        }
+            "commands": ["inlineChat.start"],
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         // Vim bindings
         {
             // Paste replace
             "before": ["<leader>", "p"],
-            "after": ["\"", "_", "d", "P"]
+            "after": ["\"", "_", "d", "P"],
         },
         {
             // Delete
             "before": ["<leader>", "d"],
-            "after": ["\"", "_", "d"]
+            "after": ["\"", "_", "d"],
         },
 
         // Vscode bindings
         {
             // Search text in workspace files
             "before": ["<leader>", "<S-f>"],
-            "commands": ["workbench.action.findInFiles"]
+            "commands": ["workbench.action.findInFiles"],
         },
         {
             // Search text in current file
             "before": ["<leader>", "f"],
-            "commands": ["actions.find"]
-        }
+            "commands": ["actions.find"],
+        },
     ],
 
     // Extensions & Plugins
@@ -272,5 +276,5 @@
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-http-request-pre-request.instructions.md": true
     },
     "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "chat.viewSessions.orientation": "stacked"
+    "chat.viewSessions.orientation": "stacked",
 }
