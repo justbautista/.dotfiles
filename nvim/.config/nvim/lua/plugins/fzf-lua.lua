@@ -1,13 +1,53 @@
-local add = require('mini.deps').add
+local add = require("mini.deps").add
 
-add({ source = 'ibhagwan/fzf-lua', depends = { 'nvim-treesitter/nvim-treesitter' } })
+add({ source = "ibhagwan/fzf-lua", depends = { "j-hui/fidget.nvim", "nvim-treesitter/nvim-treesitter" } })
 
-require('fzf-lua').setup()
+require("fzf-lua").setup({
+	winopts = {
+		fullscreen = true,
+		border = "rounded",
+		preview = {
+			border = "solid",
+		},
+	},
+})
 
-local fzf = require('fzf-lua')
+local fzf = require("fzf-lua")
 
-vim.keymap.set('n', '<leader><leader>', fzf.files, { desc = "Find files" })
-vim.keymap.set('n', '<leader>fg', fzf.live_grep, { desc = "Project-wide grep" })
-vim.keymap.set('n', '<leader>fh', fzf.help_tags, { desc = "Search help" })
-vim.keymap.set('n', '<leader>fs', fzf.treesitter, { desc = "Search symbols" })
+vim.keymap.set("n", "<leader><leader>", fzf.files, { desc = "Find files" })
+vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "Project-wide grep" })
+vim.keymap.set("n", "<leader>fh", fzf.help_tags, { desc = "Search help" })
+vim.keymap.set("n", "<leader>fs", fzf.treesitter, { desc = "Search symbols" })
 
+local function fidget_history()
+	local ok, notifications = pcall(function()
+		return require("fidget.notification").get_history()
+	end)
+
+	if not ok or not notifications then
+		vim.notify("No Fidget history found")
+		return
+	end
+
+	local items = {}
+
+	for _, notif in ipairs(notifications) do
+		local msg = notif.message or ""
+		local title = notif.title or ""
+		local level = notif.level or "INFO"
+
+		table.insert(items, string.format("[%s] %s %s", level, title, msg))
+	end
+
+	fzf.fzf_exec(items, {
+		prompt = "Notifications❯ ",
+		previewer = false,
+		actions = {
+			["default"] = function(selected)
+				print(selected[1])
+			end,
+		},
+	})
+end
+
+vim.keymap.set("n", "<leader>fn", fidget_history)

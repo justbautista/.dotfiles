@@ -1,22 +1,5 @@
 {
     // Vim
-    "agent_servers": {
-        "opencode": {
-            "default_mode": "plan",
-            "favorite_models": [
-                "openai/gpt-5.2-codex/medium",
-                "openai/gpt-5.2-codex/high",
-                "openai/gpt-5.2/medium",
-                "openai/gpt-5.2/high",
-                "opencode/kimi-k2.5-free",
-                "opencode/glm-4.7-free",
-            ],
-            "type": "registry",
-        },
-        "codex": {
-            "favorite_models": ["gpt-5.2-codex/medium", "gpt-5.2-codex/high", "gpt-5.2/medium", "gpt-5.2/high"],
-        },
-    },
     "vim_mode": true,
     "vim": {
         "use_smartcase_find": true,
@@ -35,6 +18,23 @@
     "format_on_save": "on",
 
     // AI
+    "agent_servers": {
+        "opencode": {
+            "default_mode": "plan",
+            "favorite_models": [
+                "openai/gpt-5.2-codex/medium",
+                "openai/gpt-5.2-codex/high",
+                "openai/gpt-5.2/medium",
+                "openai/gpt-5.2/high",
+                "opencode/kimi-k2.5-free",
+                "opencode/glm-4.7-free",
+            ],
+            "type": "registry",
+        },
+        "codex": {
+            "favorite_models": ["gpt-5.2-codex/medium", "gpt-5.2-codex/high", "gpt-5.2/medium", "gpt-5.2/high"],
+        },
+    },
     "agent": {
         "default_model": {
             "provider": "copilot_chat",
@@ -47,10 +47,8 @@
         "default_view": "thread",
         "always_allow_tool_actions": false,
     },
-    "features": {
-        "edit_prediction_provider": "zed",
-    },
     "edit_predictions": {
+        "provider": "zed",
         "mode": "subtle",
     },
 
