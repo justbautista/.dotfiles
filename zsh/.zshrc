@@ -199,6 +199,8 @@ alias hm="cd ~"
 alias hc="cd ~ && clear"
 alias nv="nvim"
 alias ..="cd .."
+alias o="cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Master"
+alias on="nvim ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Master"
 
 # brew aliases
 alias refill="brew update && brew upgrade && brew cleanup"

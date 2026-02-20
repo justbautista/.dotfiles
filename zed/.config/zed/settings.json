@@ -45,7 +45,9 @@
             "model": "gpt-4.1",
         },
         "default_view": "thread",
-        "always_allow_tool_actions": false,
+        "tool_permissions": {
+            "default": "confirm",
+        },
     },
     "edit_predictions": {
         "provider": "zed",
@@ -78,6 +80,7 @@
     },
 
     // Editor
+    "semantic_tokens": "combined",
     "auto_signature_help": true,
     "gutter": {
         "runnables": false,
