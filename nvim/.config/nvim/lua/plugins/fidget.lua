@@ -1,7 +1,6 @@
-local add = require("mini.deps").add
+vim.pack.add({ "https://github.com/j-hui/fidget.nvim" })
 
-add({ source = "j-hui/fidget.nvim" })
+local fidget = require("fidget")
 
-require("fidget").setup()
-
-vim.notify = require("fidget.notification").notify
+fidget.setup()
+vim.notify = fidget.notify

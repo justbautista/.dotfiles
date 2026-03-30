@@ -1,19 +1,26 @@
-local add = require("mini.deps").add
-
-add({ source = "stevearc/oil.nvim" })
-add({ source = "benomahony/oil-git.nvim", depends = { "stevearc/oil.nvim" } }) -- git hightlighting for files
+vim.pack.add({
+	"https://github.com/stevearc/oil.nvim",
+	"https://github.com/benomahony/oil-git.nvim", -- extension for oil
+})
 
 require("oil").setup({
+	preview_win = {
+		preview_method = "fast_scratch",
+	},
 	view_options = {
 		show_hidden = true,
 	},
 	delete_to_trash = true,
 	confirmation = {
-		border = "single",
+		border = "solid",
 	},
 	progress = {
-		border = "single",
+		border = "solid",
 	},
+	lsp_file_methods = {
+		autosave_changes = true,
+	},
+	watch_for_changes = true,
 })
 
 -- open oil from normal buffer

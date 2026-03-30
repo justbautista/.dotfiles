@@ -1,14 +1,28 @@
--- order matters
--- set leader globally first
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.localleader = " "
 
--- bootstrap mini.deps, set options as plugins may rely on them, then load plugins
-require("config.mini")
-require("config.options")
-require("plugins")
+require("configs.options")
+require("configs.keymaps")
+require("configs.autocmds")
 
--- set general keymaps and autocmds
-require("config.keymaps")
-require("config.autocmds")
-
+local pack = require("utils.pack")
+local plugins_dir = "plugins"
+local plugins = {
+	"themes",
+	"icons",
+	"fidget",
+	"oil",
+	"treesitter",
+	"fzf-lua",
+	"mini",
+	"gitsigns",
+	"lualine",
+	"lsp",
+	"blink-cmp",
+	"conform",
+	"grug-far",
+	"diffview",
+    "render-md",
+}
+pack.add(plugins, plugins_dir)
+pack.set_keymaps()

@@ -25,6 +25,8 @@
         "bindings": {
             "cmd-G": "git_panel::ToggleFocus", // Git panel
             "cmd-?": "workspace::ToggleRightDock", // Close agent panel
+            "space m o": "markdown::OpenPreview",
+            "space m s": "markdown::OpenPreviewToTheSide",
         },
     },
     // Close left dock when in ProjectPanel

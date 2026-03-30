@@ -170,7 +170,7 @@
         "regex": true,
     },
     "terminal": {
-        "dock": "right",
+        "dock": "bottom",
         "detect_venv": {
             "on": {
                 "directories": [".venv", "venv"],
@@ -196,6 +196,7 @@
         "starts_open": true,
     },
     "git_panel": {
+        "tree_view": false,
         "scrollbar": {
             "show": "auto",
         },

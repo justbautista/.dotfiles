@@ -1,29 +1,20 @@
-local add = require("mini.deps").add
-
-add({
-	source = "nvim-treesitter/nvim-treesitter",
-	checkout = "main",
-	hooks = {
-		post_checkout = function()
-			vim.cmd("TSUpdate")
-		end,
+vim.pack.add({
+	{
+		src = "https://github.com/nvim-treesitter/nvim-treesitter",
+		version = "main",
 	},
 })
 
-require("nvim-treesitter").setup()
-require("nvim-treesitter.config").setup({
-	auto_install = true,
-	ensure_installed = {
-		"lua",
-		"python",
-		"go",
-		"rust",
-		"javascript",
-		"typescript",
-		"regex",
-		"html",
-		"css",
-		"markdown",
-		"vim",
-	},
+require("nvim-treesitter").install({
+	"lua",
+	"markdown_inline",
+	"markdown",
+	"vimdoc",
+	"python",
+	"go",
+	"javascript",
+	"typescript",
+	"json",
+	"yaml",
+	"toml",
 })

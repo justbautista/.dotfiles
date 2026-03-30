@@ -42,15 +42,19 @@ vim.keymap.set(
 	{ desc = "Decrease window size horizontally", noremap = true, silent = true }
 )
 
--- escape also clears hlsearch
 vim.keymap.set("n", "<esc>", function()
 	vim.cmd("nohlsearch")
-	return "<esc>"
-end, { desc = "Escape, clear hlsearch", expr = true })
+	vim.lsp.buf.clear_references()
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_get_config(win).relative ~= "" then
+			pcall(vim.api.nvim_win_close, win, false)
+		end
+	end
+end, { desc = "Escape: clear hlsearch, LSP refs, floating wins" })
 
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select all" })
 
-vim.keymap.set("n", "x", '"_x', { desc = "Delete char without saving in register" })
-vim.keymap.set("v", "<leader>p", '"_dP', { desc = "Paste over selected without saving in register" })
+vim.keymap.set("n", "<leader>_x", '"_x', { desc = "Delete char without saving in register" })
+vim.keymap.set("v", "<leader>_p", '"_dP', { desc = "Paste over selected without saving in register" })
 
 vim.keymap.set("n", "<leader><tab>", "<cmd>e #<cr>", { desc = "Alt-tab", silent = true })

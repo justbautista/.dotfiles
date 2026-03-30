@@ -268,6 +268,9 @@
     "go.toolsManagement.autoUpdate": true,
     "chat.instructionsFilesLocations": {
         ".github/instructions": true,
+        ".claude/rules": true,
+        "~/.copilot/instructions": true,
+        "~/.claude/rules": true,
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-collections-post-response.instructions.md": true,
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-collections-pre-request.instructions.md": true,
         "/var/folders/7r/tw19rmjn63b4jhgwcrhyg8880000gn/T/postman-folder-post-response.instructions.md": true,

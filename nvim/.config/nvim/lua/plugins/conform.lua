@@ -1,6 +1,4 @@
-local add = require("mini.deps").add
-
-add({ source = "stevearc/conform.nvim" })
+vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 
 require("conform").setup({
 	python = { "ruff" },

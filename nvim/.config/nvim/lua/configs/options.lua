@@ -6,7 +6,8 @@ vim.o.shiftwidth = 4 -- how much to move selection in spaces when >/< or >>/<<
 vim.o.expandtab = true -- make tabs into spaces
 
 vim.o.mouse = "a" -- enable mouse
-vim.o.mousescroll = "ver:1,hor:1" -- smoother scroll
+vim.o.mousescroll = "ver:1,hor:1" -- smoother mouse scroll
+vim.o.sidescrolloff = 10 -- offset between cursor and sides of buffer
 
 vim.o.clipboard = "unnamedplus" -- sync os and nvim clipboard
 
@@ -36,7 +37,6 @@ vim.opt.fillchars = { eob = " " } -- remove ~ from fill lines
 
 vim.o.showmode = false -- mode already shows in statusline
 
-vim.o.winborder = "single"
--- vim.o.pumborder = "single"
-vim.opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
-vim.opt.completeopt:remove("preview")
+vim.o.winborder = "solid" -- border for windows
+
+vim.o.autoread = true -- automatically reload files changed outside of nvim (mostly for agentic coding)

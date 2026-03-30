@@ -1,6 +1,4 @@
-local add = require("mini.deps").add
-
-add({ source = "nvim-lualine/lualine.nvim", depends = { "nvim-tree/nvim-web-devicons" } })
+vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim", "https://github.com/nvim-tree/nvim-web-devicons" })
 
 require("lualine").setup({
 	options = {

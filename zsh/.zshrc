@@ -128,6 +128,9 @@ export PATH=$N_PREFIX/bin:$PATH
 # fzf
 source <(fzf --zsh)
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # -- Use fd instead of fzf --
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -178,7 +181,7 @@ _fzf_comprun() {
 
 # bat
 alias cat='bat'
-export BAT_THEME=Dracula
+export BAT_THEME="Catppuccin Mocha"
 
 # eza
 alias ls="eza --color=always --long --git --changed --icons=always --no-user --no-permissions --grid"
@@ -201,6 +204,7 @@ alias nv="nvim"
 alias ..="cd .."
 alias o="cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Master"
 alias on="nvim ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Master"
+alias nvpurge="rm -rf ~/.local/state/nvim && rm -rf ~/.local/share/nvim"
 
 # brew aliases
 alias refill="brew update && brew upgrade && brew cleanup"
@@ -212,35 +216,8 @@ alias dot_nvim="cd ~/.dotfiles/nvim/.config/nvim"
 alias dot_ghostty="cd ~/.dotfiles/ghostty/.config/ghostty"
 alias dot_vscode='cd ~/.dotfiles/vscode/Library/Application\ Support/Code/User'
 
-# chezmoi edit
-# chezit() {
-#   case "$1" in
-#     zshrc) chezmoi edit --apply ~/.zshrc && source ~/.zshrc ;;
-#     ghostty) chezmoi edit --apply ~/.config/ghostty/config ;;
-#     ruff) chezmoi edit --apply ~/.config/ruff/ruff.toml ;;
-#     prettier) chezmoi edit --apply ~/.config/prettier/.prettierrc ;;
-#     vscs) chezmoi edit --apply ~/Library/Application\ Support/Code/User/settings.json ;;
-#     vsck) chezmoi edit --apply ~/Library/Application\ Support/Code/User/keybindings.json ;;
-#     nvim) nvim ~/.local/share/chezmoi/dot_config/nvim && chezmoi re-add ~/.config/nvim/lazyvim.json && chezmoi re-add ~/.config/nvim/lazy-lock.json && chezmoi apply ;;
-#     starship) chezmoi edit --apply ~/.config/starship.toml ;;
-#     config) nvim ~/.local/share/chezmoi/.chezmoi.toml.tmpl && chezmoi init ;;
-#     ignore) nvim ~/.local/share/chezmoi/.chezmoiignore.tmpl && chezmoi apply ;;
-#     gitignore) nvim ~/.local/share/chezmoi/.gitignore ;;
-#     *) 
-#       echo "Huh? What is '$1'?"
-#       echo "-------------------------"
-#       echo "Existing chezitz:"
-#       echo "zshrc"
-#       echo "ghostty"
-#       echo "ruff"
-#       echo "prettier"
-#       echo "vscs"
-#       echo "vsck"
-#       echo "nvim"
-#       echo "starship"
-#       echo "bashrc"
-#       echo "config"
-#       echo "ignore"
-#       ;;
-#   esac
-# }
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/justin/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

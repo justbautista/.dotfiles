@@ -1,6 +1,4 @@
-local add = require("mini.deps").add
-
-add({ source = "lewis6991/gitsigns.nvim" })
+vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
 
 require("gitsigns").setup({
 	signs = {
@@ -24,9 +22,10 @@ require("gitsigns").setup({
 			vim.keymap.set(mode, l, r, opts)
 		end
 
-		map("n", "<leader>gh", function()
+		map("n", "<leader>gp", function()
 			gitsigns.toggle_word_diff()
 			gitsigns.toggle_linehl()
-		end, { desc = "Toggle Gitsigns word and line diff highlights" })
+		end, { desc = "Toggle Gitsigns word and line diffs" })
+		map("n", "<leader>gh", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview Git hunk" })
 	end,
 })

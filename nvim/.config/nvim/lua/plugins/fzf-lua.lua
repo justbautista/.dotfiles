@@ -1,11 +1,13 @@
-local add = require("mini.deps").add
-
-add({ source = "ibhagwan/fzf-lua", depends = { "j-hui/fidget.nvim", "nvim-treesitter/nvim-treesitter" } })
+vim.pack.add({
+	"https://github.com/ibhagwan/fzf-lua",
+	"https://github.com/j-hui/fidget.nvim", -- dep
+	"https://github.com/nvim-treesitter/nvim-treesitter", -- dep
+})
 
 require("fzf-lua").setup({
 	winopts = {
-		fullscreen = true,
-		border = "rounded",
+		fullscreen = false,
+		border = "solid",
 		preview = {
 			border = "solid",
 		},
@@ -50,4 +52,4 @@ local function fidget_history()
 	})
 end
 
-vim.keymap.set("n", "<leader>fn", fidget_history)
+vim.keymap.set("n", "<leader>fn", fidget_history, { desc = "Fidget notification history" })
