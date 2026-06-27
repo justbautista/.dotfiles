@@ -23,6 +23,8 @@ local servers = {
 	"yamlls",
 	"taplo",
 	"gopls",
+	"terraformls",
+	"ansiblels",
 }
 
 require("mason-tool-installer").setup({ ensure_installed = servers })

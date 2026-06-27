@@ -17,4 +17,5 @@ require("nvim-treesitter").install({
 	"json",
 	"yaml",
 	"toml",
+	"terraform",
 })

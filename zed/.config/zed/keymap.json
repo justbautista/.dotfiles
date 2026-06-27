@@ -25,8 +25,6 @@
         "bindings": {
             "cmd-G": "git_panel::ToggleFocus", // Git panel
             "cmd-?": "workspace::ToggleRightDock", // Close agent panel
-            "space m o": "markdown::OpenPreview",
-            "space m s": "markdown::OpenPreviewToTheSide",
         },
     },
     // Close left dock when in ProjectPanel
@@ -87,6 +85,8 @@
             "alt-z": "editor::ToggleSoftWrap",
             "cmd-enter": "assistant::InlineAssist",
             "space a": "editor::SelectAll",
+            "ctrl-m o": "markdown::OpenPreview",
+            "ctrl-m s": "markdown::OpenPreviewToTheSide",
         },
     },
     // Enable MiniQuotes and MiniBrackets
