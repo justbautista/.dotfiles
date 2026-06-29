@@ -221,3 +221,6 @@ fpath=(/Users/justin/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1
+

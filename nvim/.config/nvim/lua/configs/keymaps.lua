@@ -18,38 +18,38 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to the right window", nore
 
 -- window sizing
 vim.keymap.set(
-	"n",
-	"<C-Up>",
-	"<cmd>resize +2<cr>",
-	{ desc = "Increase window size vertically", noremap = true, silent = true }
+    "n",
+    "<C-Up>",
+    "<cmd>resize +2<cr>",
+    { desc = "Increase window size vertically", noremap = true, silent = true }
 )
 vim.keymap.set(
-	"n",
-	"<C-Down>",
-	"<cmd>resize -2<cr>",
-	{ desc = "Decrease window size vertically", noremap = true, silent = true }
+    "n",
+    "<C-Down>",
+    "<cmd>resize -2<cr>",
+    { desc = "Decrease window size vertically", noremap = true, silent = true }
 )
 vim.keymap.set(
-	"n",
-	"<C-Left>",
-	"<cmd>vertical resize -2<cr>",
-	{ desc = "Increase window size horizontally", noremap = true, silent = true }
+    "n",
+    "<C-Left>",
+    "<cmd>vertical resize -2<cr>",
+    { desc = "Increase window size horizontally", noremap = true, silent = true }
 )
 vim.keymap.set(
-	"n",
-	"<C-Right>",
-	"<cmd>vertical resize +2<cr>",
-	{ desc = "Decrease window size horizontally", noremap = true, silent = true }
+    "n",
+    "<C-Right>",
+    "<cmd>vertical resize +2<cr>",
+    { desc = "Decrease window size horizontally", noremap = true, silent = true }
 )
 
 vim.keymap.set("n", "<esc>", function()
-	vim.cmd("nohlsearch")
-	vim.lsp.buf.clear_references()
-	for _, win in ipairs(vim.api.nvim_list_wins()) do
-		if vim.api.nvim_win_get_config(win).relative ~= "" then
-			pcall(vim.api.nvim_win_close, win, false)
-		end
-	end
+    vim.cmd("nohlsearch")
+    vim.lsp.buf.clear_references()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        if vim.api.nvim_win_get_config(win).relative ~= "" then
+            pcall(vim.api.nvim_win_close, win, false)
+        end
+    end
 end, { desc = "Escape: clear hlsearch, LSP refs, floating wins" })
 
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select all" })

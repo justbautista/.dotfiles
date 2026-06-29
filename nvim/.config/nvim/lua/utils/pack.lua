@@ -99,7 +99,7 @@ M.update = function(plugins)
 	local plugins_available = M.get()
 	local plugins_list = {}
 	for _, p in ipairs(plugins_available) do
-		table.insert(plugins_list, p[0])
+		table.insert(plugins_list, p[1])
 	end
 	vim.pack.update(plugins_list)
 end
