@@ -1,5 +1,5 @@
 vim.pack.add({
-	"https://github.com/saghen/blink.cmp",
+	{ src = "https://github.com/saghen/blink.cmp", version = "v1" },
 	"https://github.com/L3MON4D3/LuaSnip", -- dep
 	"https://github.com/github/copilot.vim", -- dep
 	"https://github.com/fang2hou/blink-copilot", -- dep
