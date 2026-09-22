@@ -1,0 +1,27 @@
+model = "gpt-5.6-sol"
+approval_policy = "on-request"
+approvals_reviewer = "user"
+sandbox_mode = "read-only"
+allow_login_shell = false
+
+[sandbox_workspace_write]
+network_access = false
+
+[projects."/Users/justin/Developer/playground"]
+trust_level = "trusted"
+
+[tui]
+status_line = [
+    "model-with-reasoning",
+    "current-dir",
+    "git-branch",
+    "approval-mode",
+    "context-used",
+    "five-hour-limit",
+    "weekly-limit",
+]
+status_line_use_colors = true
+pet = "fireball"
+
+[tui.model_availability_nux]
+gpt-6-astra = 4

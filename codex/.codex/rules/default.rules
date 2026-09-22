@@ -1,0 +1,85 @@
+# Git inspection
+prefix_rule(
+    pattern = ["git", [
+        "status",
+        "diff",
+        "log",
+        "show",
+        "rev-parse",
+        "ls-files",
+        "ls-tree",
+        "blame",
+        "grep",
+    ]],
+    decision = "allow",
+    justification = "Read-only Git inspection is always allowed.",
+)
+
+# Safe shell inspection
+prefix_rule(
+    pattern = [[
+        "grep",
+        "rg",
+        "wc",
+        "ls",
+        "pwd",
+        "cat",
+        "head",
+        "tail",
+        "stat",
+        "file",
+    ]],
+    decision = "allow",
+    justification = "Read-only inspection is always allowed.",
+)
+
+# Unsafe shell commands
+prefix_rule(
+    pattern = [[
+        "rm",
+        "rmdir",
+        "mv",
+        "cp",
+        "curl",
+        "wget",
+        "chmod",
+        "chown",
+        "chgrp",
+        "kill",
+        "killall",
+        "pkill",
+        "truncate",
+        "ln",
+        "sed",
+    ]],
+    decision = "prompt",
+    justification = "Potentially destructive, mutating, or network operation requires explicit approval.",
+)
+
+# Git operations where you explicitly require oversight
+prefix_rule(
+    pattern = ["git", [
+        "add",
+        "commit",
+        "push",
+        "reset",
+        "rebase",
+        "clean",
+        "revert",
+        "switch",
+        "checkout",
+        "merge",
+        "cherry-pick",
+        "restore",
+        "branch",
+        "rm",
+        "mv",
+        "tag",
+        "pull",
+        "fetch",
+        "config",
+        "stash",
+    ]],
+    decision = "prompt",
+    justification = "Repository-changing operation requires explicit approval.",
+)
