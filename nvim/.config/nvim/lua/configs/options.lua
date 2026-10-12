@@ -7,6 +7,7 @@ vim.o.expandtab = true -- make tabs into spaces
 
 vim.o.mouse = "a" -- enable mouse
 vim.o.mousescroll = "ver:1,hor:1" -- smoother mouse scroll
+vim.o.scrolloff = 999 -- keep cursor vertically centered (see autocmds.lua for near EOF)
 vim.o.sidescrolloff = 10 -- offset between cursor and sides of buffer
 
 vim.o.clipboard = "unnamedplus" -- sync os and nvim clipboard

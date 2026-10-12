@@ -1,14 +1,6 @@
--- center cursor
-vim.keymap.set({ "n", "v" }, "j", "jzz", { desc = "Scroll downwards" })
-vim.keymap.set({ "n", "v" }, "k", "kzz", { desc = "Scroll upwards" })
-vim.keymap.set({ "n", "v" }, "<C-d>", "<C-d>zz", { desc = "Scroll downwards" })
-vim.keymap.set({ "n", "v" }, "<C-u>", "<C-u>zz", { desc = "Scroll upwards" })
-vim.keymap.set({ "n", "v" }, "n", "nzzzv", { desc = "Next result" })
-vim.keymap.set({ "n", "v" }, "N", "Nzzzv", { desc = "Previous result" })
-
--- easily move line selections up and down, keeping center
-vim.keymap.set("v", "J", ":m '>+1<enter>gv=gvzz", { desc = "Move selection down", silent = true })
-vim.keymap.set("v", "K", ":m '<-2<enter>gv=gvzz", { desc = "Move selection up", silent = true })
+-- easily move line selections up and down (centering handled by scrolloff + autocmd)
+vim.keymap.set("v", "J", ":m '>+1<enter>gv=gv", { desc = "Move selection down", silent = true })
+vim.keymap.set("v", "K", ":m '<-2<enter>gv=gv", { desc = "Move selection up", silent = true })
 
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to the left window", silent = true })

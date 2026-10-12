@@ -7,6 +7,22 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- keep cursor centered near EOF, where scrolloff can't scroll past the last line.
+-- zz only moves the view; winrestview({ topline }) gets overridden by scrolloff=999
+vim.api.nvim_create_autocmd("CursorMoved", {
+	desc = "Center cursor near end of file",
+	group = vim.api.nvim_create_augroup("center-eof", { clear = true }),
+	callback = function()
+		if vim.bo.buftype ~= "" then
+			return
+		end
+		local half = math.floor(vim.api.nvim_win_get_height(0) / 2)
+		if vim.fn.line("$") - vim.fn.line(".") < half then
+			vim.cmd("normal! zz")
+		end
+	end,
+})
+
 -- highlight references when the cursor is idle
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
