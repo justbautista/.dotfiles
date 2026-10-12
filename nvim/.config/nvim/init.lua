@@ -19,7 +19,6 @@ local plugins = {
 	"lualine",
 	"lsp",
 	"blink-cmp",
-	"conform",
 	"grug-far",
 	"diffview",
 	"render-md",

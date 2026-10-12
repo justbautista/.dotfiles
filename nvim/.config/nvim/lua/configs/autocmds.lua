@@ -37,6 +37,34 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+-- format on save with one LSP per filetype
+local formatter_for = {
+	lua = "stylua",
+	python = "ruff",
+	go = "gopls",
+	javascript = "biome",
+	javascriptreact = "biome",
+	typescript = "biome",
+	typescriptreact = "biome",
+	json = "biome",
+	jsonc = "biome",
+	css = "biome",
+	html = "html", -- biome's html formatter is opt-in
+	toml = "taplo",
+	yaml = "yamlls",
+}
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	desc = "Format on save with the filetype's LSP formatter",
+	group = vim.api.nvim_create_augroup("lsp-format", { clear = true }),
+	callback = function(args)
+		local name = formatter_for[vim.bo[args.buf].filetype]
+		if name then
+			vim.lsp.buf.format({ bufnr = args.buf, name = name, timeout_ms = 500 })
+		end
+	end,
+})
+
 --- ### autocommands mostly for editing and coding with an agent ###
 
 -- auto save when focus lost or buffer leave

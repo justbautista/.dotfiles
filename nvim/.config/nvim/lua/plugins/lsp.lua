@@ -1,34 +1,40 @@
 vim.pack.add({
-	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/neovim/nvim-lspconfig", -- server configs (lsp/*.lua) for vim.lsp.enable
 	"https://github.com/mason-org/mason.nvim",
-	"https://github.com/mason-org/mason-lspconfig.nvim",
-	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	"https://github.com/smjonas/inc-rename.nvim", -- nice ui for 'grn'
 })
 
 require("mason").setup()
-require("mason-lspconfig").setup()
 
+-- lspconfig server name -> mason package name
 local servers = {
-	"lua_ls",
-	"stylua",
-	"ruff",
-	-- "ty",
-	"pyrefly",
-	"vtsls",
-	"biome",
-	"html",
-	"tailwindcss",
-	"cssls",
-	"marksman",
-	"yamlls",
-	"taplo",
-	"gopls",
-	"terraformls",
-	"ansiblels",
+	lua_ls = "lua-language-server",
+	stylua = "stylua",
+	ruff = "ruff",
+	pyrefly = "pyrefly",
+	vtsls = "vtsls",
+	biome = "biome",
+	html = "html-lsp",
+	tailwindcss = "tailwindcss-language-server",
+	cssls = "css-lsp",
+	marksman = "marksman",
+	yamlls = "yaml-language-server",
+	taplo = "taplo",
+	gopls = "gopls",
 }
 
-require("mason-tool-installer").setup({ ensure_installed = servers })
+-- install missing servers
+local registry = require("mason-registry")
+registry.refresh(function()
+	for _, pkg_name in pairs(servers) do
+		local pkg = registry.get_package(pkg_name)
+		if not pkg:is_installed() then
+			pkg:install()
+		end
+	end
+end)
+
+vim.lsp.enable(vim.tbl_keys(servers))
 
 vim.diagnostic.config({
 	virtual_text = true,

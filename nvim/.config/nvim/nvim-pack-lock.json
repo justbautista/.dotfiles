@@ -4,22 +4,10 @@
       "rev": "0abc8f390b278c3b4aabc4c004ac8a088b65cf24",
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
-    "blink-copilot": {
-      "rev": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39",
-      "src": "https://github.com/fang2hou/blink-copilot"
-    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
       "version": "'v1'"
-    },
-    "conform.nvim": {
-      "rev": "016802de402556da54c36bd7359b441266b01cdd",
-      "src": "https://github.com/stevearc/conform.nvim"
-    },
-    "copilot.vim": {
-      "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
-      "src": "https://github.com/github/copilot.vim"
     },
     "diffview.nvim": {
       "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
@@ -48,14 +36,6 @@
     "lualine.nvim": {
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
-    },
-    "mason-lspconfig.nvim": {
-      "rev": "e17625cdc8c2650787467398e02c5d63a2cde966",
-      "src": "https://github.com/mason-org/mason-lspconfig.nvim"
-    },
-    "mason-tool-installer.nvim": {
-      "rev": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc",
-      "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
     },
     "mason.nvim": {
       "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",

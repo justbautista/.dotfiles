@@ -1,8 +1,6 @@
 vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp", version = "v1" },
 	"https://github.com/L3MON4D3/LuaSnip", -- dep
-	"https://github.com/github/copilot.vim", -- dep
-	"https://github.com/fang2hou/blink-copilot", -- dep
 })
 
 require("blink.cmp").setup({
@@ -64,18 +62,7 @@ require("blink.cmp").setup({
 	},
 
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer", "copilot" },
-		providers = {
-			copilot = {
-				name = "copilot",
-				module = "blink-copilot",
-				score_offset = 100,
-				async = true,
-				opts = {
-					max_completions = 1,
-				},
-			},
-		},
+		default = { "lsp", "path", "snippets", "buffer" },
 	},
 
 	snippets = {
@@ -89,18 +76,4 @@ require("blink.cmp").setup({
 	signature = {
 		enabled = true,
 	},
-})
-
--- Hide Copilot suggestions when blink's completion menu is open
-vim.api.nvim_create_autocmd("User", {
-	pattern = "BlinkCmpMenuOpen",
-	callback = function()
-		vim.b.copilot_suggestion_hidden = true
-	end,
-})
-vim.api.nvim_create_autocmd("User", {
-	pattern = "BlinkCmpMenuClose",
-	callback = function()
-		vim.b.copilot_suggestion_hidden = false
-	end,
 })
