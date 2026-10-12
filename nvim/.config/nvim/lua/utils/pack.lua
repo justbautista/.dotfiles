@@ -8,7 +8,7 @@ M.set_keymaps = function()
 		M.show()
 	end, { desc = "Show plugins" })
 	vim.keymap.set("n", "<leader>pu", function()
-		M.update({})
+		M.update()
 	end, { desc = "Update plugins" })
 end
 
@@ -41,22 +41,10 @@ M.cleanup = function()
 	end
 end
 
---- Get plugins
---- @return table<number, table<string, boolean>> List of pairs, where each pair is plugin name and is active
-M.get = function()
-	local plugins = {}
-	for _, plugin in ipairs(vim.pack.get()) do
-		table.insert(plugins, { plugin.spec.name, plugin.active })
-	end
-
-	return plugins
-end
-
---- Show plugins
+--- Show plugins and their status without fetching updates
 --- @return nil
 M.show = function()
-	local plugins = M.get()
-	vim.print(plugins)
+	vim.pack.update(nil, { offline = true })
 end
 
 --- Add and setup plugins
@@ -87,21 +75,11 @@ M.add = function(plugins, plugins_dir)
 	end
 end
 
---- Add and setup plugins
---- @param plugins string[] List of strings of plugins
+--- Update plugins
+--- @param plugins? string[] Plugin names to update, all plugins if nil
 --- @return nil
 M.update = function(plugins)
-	if #plugins > 0 then
-		vim.pack.update(plugins)
-		return
-	end
-
-	local plugins_available = M.get()
-	local plugins_list = {}
-	for _, p in ipairs(plugins_available) do
-		table.insert(plugins_list, p[1])
-	end
-	vim.pack.update(plugins_list)
+	vim.pack.update(plugins)
 end
 
 return M

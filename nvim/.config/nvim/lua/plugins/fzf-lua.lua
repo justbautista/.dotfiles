@@ -1,8 +1,4 @@
-vim.pack.add({
-	"https://github.com/ibhagwan/fzf-lua",
-	"https://github.com/j-hui/fidget.nvim", -- dep
-	"https://github.com/nvim-treesitter/nvim-treesitter", -- dep
-})
+vim.pack.add({ "https://github.com/ibhagwan/fzf-lua" })
 
 require("fzf-lua").setup({
 	winopts = {
