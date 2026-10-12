@@ -38,5 +38,3 @@ vim.opt.fillchars = { eob = " " } -- remove ~ from fill lines
 vim.o.showmode = false -- mode already shows in statusline
 
 vim.o.winborder = "solid" -- border for windows
-
-vim.o.autoread = true -- automatically reload files changed outside of nvim (mostly for agentic coding)

@@ -11,12 +11,6 @@ require("oil").setup({
 		show_hidden = true,
 	},
 	delete_to_trash = true,
-	confirmation = {
-		border = "solid",
-	},
-	progress = {
-		border = "solid",
-	},
 	lsp_file_methods = {
 		autosave_changes = true,
 	},

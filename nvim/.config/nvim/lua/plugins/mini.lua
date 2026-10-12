@@ -33,9 +33,6 @@ clue.setup({
 		{ mode = "n", keys = "]" },
 	},
 	window = {
-		config = {
-			border = "solid",
-		},
 		delay = 100,
 	},
 })

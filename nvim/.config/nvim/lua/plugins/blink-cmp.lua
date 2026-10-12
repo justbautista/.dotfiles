@@ -24,7 +24,6 @@ require("blink.cmp").setup({
 
 	completion = {
 		menu = {
-			border = "solid",
 			draw = {
 				treesitter = { "lsp" },
 			},
@@ -32,9 +31,6 @@ require("blink.cmp").setup({
 		documentation = {
 			auto_show = true,
 			auto_show_delay_ms = 500,
-			window = {
-				border = "solid",
-			},
 			treesitter_highlighting = true,
 		},
 	},
