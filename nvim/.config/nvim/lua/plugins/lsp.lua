@@ -18,6 +18,7 @@ local servers = {
 	tailwindcss = "tailwindcss-language-server",
 	cssls = "css-lsp",
 	marksman = "marksman",
+	jsonls = "json-lsp",
 	yamlls = "yaml-language-server",
 	taplo = "taplo",
 	gopls = "gopls",

@@ -37,30 +37,33 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
--- format on save with one LSP per filetype
-local formatter_for = {
-	lua = "stylua",
-	python = "ruff",
-	go = "gopls",
-	javascript = "biome",
-	javascriptreact = "biome",
-	typescript = "biome",
-	typescriptreact = "biome",
-	json = "biome",
-	jsonc = "biome",
-	css = "biome",
-	html = "html", -- biome's html formatter is opt-in
-	toml = "taplo",
-	yaml = "yamlls",
+-- format on save with the first attached LSP in each filetype's list
+-- (biome only attaches in projects with a biome config)
+local formatters_for = {
+	lua = { "stylua" },
+	python = { "ruff" },
+	go = { "gopls" },
+	javascript = { "biome", "vtsls" },
+	javascriptreact = { "biome", "vtsls" },
+	typescript = { "biome", "vtsls" },
+	typescriptreact = { "biome", "vtsls" },
+	json = { "biome", "jsonls" },
+	jsonc = { "biome", "jsonls" },
+	css = { "biome", "cssls" },
+	html = { "html" }, -- biome's html formatter is opt-in
+	toml = { "taplo" },
+	yaml = { "yamlls" },
 }
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	desc = "Format on save with the filetype's LSP formatter",
 	group = vim.api.nvim_create_augroup("lsp-format", { clear = true }),
 	callback = function(args)
-		local name = formatter_for[vim.bo[args.buf].filetype]
-		if name then
-			vim.lsp.buf.format({ bufnr = args.buf, name = name, timeout_ms = 500 })
+		for _, name in ipairs(formatters_for[vim.bo[args.buf].filetype] or {}) do
+			if vim.lsp.get_clients({ bufnr = args.buf, name = name })[1] then
+				vim.lsp.buf.format({ bufnr = args.buf, name = name, timeout_ms = 500 })
+				return
+			end
 		end
 	end,
 })
