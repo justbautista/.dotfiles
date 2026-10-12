@@ -19,9 +19,6 @@ local plugins = {
 	"lualine",
 	"lsp",
 	"blink-cmp",
-	"grug-far",
-	"diffview",
-	"render-md",
 }
 pack.add(plugins, plugins_dir)
 pack.set_keymaps()
