@@ -43,6 +43,11 @@
       "src": "https://github.com/nvim-mini/mini.clue",
       "version": "'main'"
     },
+    "mini.input": {
+      "rev": "a8ab01372890c4ebf9f59893f42ad7c6bcd02c16",
+      "src": "https://github.com/nvim-mini/mini.input",
+      "version": "'stable'"
+    },
     "mini.pairs": {
       "rev": "4a014143fcb4e9df26198ccb3ecff3b9e77a048c",
       "src": "https://github.com/nvim-mini/mini.pairs",
@@ -57,6 +62,10 @@
       "rev": "6d27c288ff951e1e94cb5f91c800adeddf0dc0c2",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "nvim-tree.lua": {
+      "rev": "355bcc85a48f45b3e728219f10b880d569928965",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
+    },
     "nvim-treesitter": {
       "rev": "1a4f47b03dfe92d28de7d5654c67327ef008c9e6",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -70,14 +79,6 @@
     "nvim-web-devicons": {
       "rev": "58447c1fca354bbf184425e4a8d01deecbd6f3c4",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
-    },
-    "oil-git.nvim": {
-      "rev": "95b0d83f70e5e3e889f4d2f8b70eba5185ff67b6",
-      "src": "https://github.com/benomahony/oil-git.nvim"
-    },
-    "oil.nvim": {
-      "rev": "d3733d933833a0e59b813ecec99341527adf0c28",
-      "src": "https://github.com/stevearc/oil.nvim"
     },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",

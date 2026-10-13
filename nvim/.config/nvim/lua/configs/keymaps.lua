@@ -9,30 +9,10 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to the top window", silent
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to the right window", silent = true })
 
 -- window sizing
-vim.keymap.set(
-	"n",
-	"<C-Up>",
-	"<cmd>resize +2<cr>",
-	{ desc = "Increase window size vertically", silent = true }
-)
-vim.keymap.set(
-	"n",
-	"<C-Down>",
-	"<cmd>resize -2<cr>",
-	{ desc = "Decrease window size vertically", silent = true }
-)
-vim.keymap.set(
-	"n",
-	"<C-Left>",
-	"<cmd>vertical resize -2<cr>",
-	{ desc = "Increase window size horizontally", silent = true }
-)
-vim.keymap.set(
-	"n",
-	"<C-Right>",
-	"<cmd>vertical resize +2<cr>",
-	{ desc = "Decrease window size horizontally", silent = true }
-)
+vim.keymap.set("n", "<C-Up>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width", silent = true })
+vim.keymap.set("n", "<C-Down>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width", silent = true })
+vim.keymap.set("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height", silent = true })
+vim.keymap.set("n", "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height", silent = true })
 
 vim.keymap.set("n", "<esc>", function()
 	vim.cmd("nohlsearch")

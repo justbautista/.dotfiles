@@ -11,7 +11,7 @@ local plugins = {
 	"themes",
 	"icons",
 	"fidget",
-	"oil",
+	"nvim-tree",
 	"treesitter",
 	"fzf-lua",
 	"mini",

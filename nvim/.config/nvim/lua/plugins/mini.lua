@@ -4,10 +4,12 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-mini/mini.surround", version = "stable" },
 	{ src = "https://github.com/nvim-mini/mini.pairs", version = "stable" },
 	{ src = "https://github.com/nvim-mini/mini.clue", version = "main" },
+	{ src = "https://github.com/nvim-mini/mini.input", version = "stable" },
 })
 
 require("mini.pairs").setup()
 require("mini.surround").setup()
+require("mini.input").setup({ scope = "cursor" }) -- floating vim.ui.input near the cursor
 
 local gen_spec = require("mini.ai").gen_spec
 require("mini.ai").setup({ -- treesitter integration
