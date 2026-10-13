@@ -18,7 +18,7 @@ require("oil").setup({
 })
 
 -- open oil from normal buffer
-vim.keymap.set("n", "-", "<cmd>Oil --preview<cr>", { desc = "Open oil in preview mode" })
+-- vim.keymap.set("n", "-", "<cmd>Oil --preview<cr>", { desc = "Open oil in preview mode" })
 
 -- open oil with preview on initial load
 vim.api.nvim_create_autocmd("User", {

@@ -26,7 +26,7 @@ end, { desc = "Escape: clear hlsearch, LSP refs, floating wins" })
 
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select all" })
 
-vim.keymap.set("n", "<leader>_x", '"_x', { desc = "Delete char without saving in register" })
-vim.keymap.set("v", "<leader>_p", '"_dP', { desc = "Paste over selected without saving in register" })
+vim.keymap.set("n", "<leader>_x", '"_x', { desc = "Delete char (no yank)" })
+vim.keymap.set("v", "<leader>_p", '"_dP', { desc = "Paste over selection (no yank)" })
 
 vim.keymap.set("n", "<leader><tab>", "<cmd>e #<cr>", { desc = "Alt-tab", silent = true })

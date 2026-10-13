@@ -41,7 +41,7 @@ vim.diagnostic.config({
 	virtual_text = true,
 	signs = false,
 })
-vim.keymap.set("n", "<leader>K", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "<leader>K", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 
 require("inc_rename").setup({
 	post_hook = function() -- save all affected buffers after a replace

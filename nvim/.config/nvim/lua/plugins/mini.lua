@@ -27,12 +27,33 @@ require("mini.ai").setup({ -- treesitter integration
 })
 
 local clue = require("mini.clue")
+
+-- built-in <C-w> clues, minus the ones my own keymaps already cover
+-- (window moves are <C-h/j/k/l>, resizing is <C-Up/Down> and <C-S-Up/Down>)
+local covered = { h = true, j = true, k = true, l = true, ["+"] = true, ["-"] = true, ["<"] = true, [">"] = true }
+local window_clues = vim.tbl_filter(function(c)
+	return not covered[c.keys:sub(#"<C-w>" + 1)]
+end, clue.gen_clues.windows())
+
 clue.setup({
 	triggers = {
-		{ mode = "n", keys = "<leader>" },
-		{ mode = "n", keys = "g" },
+		{ mode = { "n", "x" }, keys = "<leader>" },
+		{ mode = { "n", "x" }, keys = "g" },
+		{ mode = { "n", "x" }, keys = "s" }, -- mini.surround
+		{ mode = { "n", "x" }, keys = "z" },
+		{ mode = "n", keys = "<C-w>" },
 		{ mode = "n", keys = "[" },
 		{ mode = "n", keys = "]" },
+	},
+	clues = {
+		{ mode = "n", keys = "<leader>f", desc = "+Find" },
+		{ mode = "n", keys = "<leader>g", desc = "+Git" },
+		{ mode = "n", keys = "<leader>p", desc = "+Plugins" },
+		{ mode = { "n", "x" }, keys = "<leader>_", desc = "+No yank" },
+		clue.gen_clues.g(),
+		clue.gen_clues.square_brackets(),
+		clue.gen_clues.z(),
+		window_clues,
 	},
 	window = {
 		delay = 100,
