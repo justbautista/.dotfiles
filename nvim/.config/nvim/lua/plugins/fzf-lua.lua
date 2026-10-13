@@ -20,6 +20,10 @@ vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fr", fzf.resume, { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>fd", fzf.diagnostics_workspace, { desc = "Diagnostics" })
 
+-- LSP pickers with preview (replace the built-in same-buffer gd and the quickfix-based grr)
+vim.keymap.set("n", "gd", fzf.lsp_definitions, { desc = "Go to definition" })
+vim.keymap.set("n", "grr", fzf.lsp_references, { desc = "References" })
+
 local function fidget_history()
 	local ok, notifications = pcall(function()
 		return require("fidget.notification").get_history()
