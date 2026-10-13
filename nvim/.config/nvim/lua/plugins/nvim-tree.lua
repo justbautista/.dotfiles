@@ -66,9 +66,27 @@ require("nvim-tree").setup({
 	},
 	filters = {
 		dotfiles = false,
+		git_ignored = false,
+		custom = { "^__pycache__$", "^\\.DS_Store$", "^\\.git$" }, -- hidden names (vim regex)
 	},
 	renderer = {
 		root_folder_label = ":t", -- show only the root folder's name
+		highlight_git = "name", -- color file/folder name by git status (status symbol is colored separately)
+		highlight_hidden = "name", -- dim dotfiles
+		icons = {
+			git_placement = "right_align",
+			glyphs = {
+				-- git status letters (ignored keeps nvim-tree's default)
+				git = {
+					unstaged = "M",
+					staged = "A",
+					untracked = "?",
+					renamed = "R",
+					deleted = "D",
+					unmerged = "C", -- conflicts
+				},
+			},
+		},
 	},
 	actions = {
 		change_dir = {
